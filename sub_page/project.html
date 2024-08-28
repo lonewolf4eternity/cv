@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Analyst Project</title>
+    <link rel="stylesheet" href="../css/frame.css" type="text/css">
+    <script type="text/javascript">
+        document.addEventListener (
+            'contextmenu', function (e) {
+                e.preventDefault();
+            }
+        );
+    </script>
+    <script type="text/javascript">
+        document.addEventListener (
+            'keydown', function (e) {
+                if (
+                    e.ctrlKey && e.keyCode === 'u'
+                ) {
+                    e.preventDefault();
+                }
+            }
+        );
+    </script>
+    <script type="text/javascript">
+        document.onkeydown = function (e) {
+            if (
+                e.ctrlKey && (
+                    e.keyCode === 67 ||
+                    e.keyCode === 86 ||
+                    e.keyCode === 85 ||
+                    e.keyCode === 117
+                )
+            ) {
+                return false;
+            } else {
+                return true;
+            }
+        };
+    </script>
+</head>
+<body>
+    <div class="sub-main-content">
+        <h1>Data Analyst Project</h1>
+    </div>
+    <div class="sub-main-content">
+        <div class="experiences">
+            <ol type="A">
+                <li>
+                    <span>Junior Data Analyst</span>
+                    <ol type="1">
+                        <li>
+                            <p><strong>Maven Market Project</strong></p>
+                            <p>2024</p>
+                            <ul>
+                                <li>Cleaning dataset CSV File using Power BI.</li>
+                                <li>Manipulate dataset with various measures and DAX functions.</li>
+                                <li>Create a data visualization display based on certain criteria.</li>
+                                <li>Provide analysis of displayed chart and provide valuable insight</li>
+                            </ul>
+                            <a href="https://drive.google.com/drive/folders/1gvpojfi0nbxCf1qNatG1a4sm9aDwKL8f?usp=drive_link" target="_blank"><button id="file-btn">Dataset</button></a>
+                            <a href="../project_page/maven_market/file_01.html"><button id="file-btn">Details</button></a>
+                        </li>
+                        <br>
+                        <li>
+                            <p><strong>Bike Sharing Dataset</strong></p>
+                            <p>2023</p>
+                            <ul>
+                                <li>Gathering, Assessing, Cleaning, Exploratory Data Analyst (EDA), Visualization & Explanatory Analysis Dataset with Python, Jupyter Notebook</li>
+                                <li>Visualize and Analyze dataset with Python : Streamlit  as dashboard</li>
+                            </ul>
+                            <a href="https://drive.google.com/drive/folders/1ywZOqLSwj-laXXu2tGtZc2BHgsOdENlS?usp=sharing" target="_blank"><button id="file-btn">Dataset</button></a><!--
+                            <a href="https://bikesharingdataset.streamlit.app/" target="_blank"><button id="file-btn">Dashboard</button></a>-->
+                            <a href="../project_page/bike_sharing/file_00.html"><button id="file-btn">Details</button></a>
+                        </li>
+                        <br>
+                        <li>
+                            <p><strong>National Highway Traffic Safety Administration USA (NHTSA)</strong></p>
+                            <p>2023</p>
+                            <ul>
+                                <li>Cleaning data in the database using queries.</li>
+                                <li>Cracking and visualizing data and discover key fact about traffic accident occurring in the USA.</li>
+                                <li>Provide valuable insight and recommendations for NHTSA to create policies to reduce accident rate in USA.</li>
+                            </ul>
+                            <a href="https://drive.google.com/drive/folders/1om88rld8_ljSCw1PVAJPsED5b2wXkmN3?usp=sharing" target="_blank"><button id="file-btn">Dataset</button></a>
+                            <a href="../project_page/nhtsa/file_00.html"><button id="file-btn">Details</button></a>
+                        </li>
+                    </ol>
+                </li>
+            </ol>
+        </div>
+    </div>
+</body>
+</html>

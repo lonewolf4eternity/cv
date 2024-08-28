@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education</title>
+    <link rel="stylesheet" href="../css/frame.css" type="text/css">
+    <script type="text/javascript">
+        document.addEventListener (
+            'contextmenu', function (e) {
+                e.preventDefault();
+            }
+        );
+    </script>
+    <script type="text/javascript">
+        document.addEventListener (
+            'keydown', function (e) {
+                if (
+                    e.ctrlKey && e.keyCode === 'u'
+                ) {
+                    e.preventDefault();
+                }
+            }
+        );
+    </script>
+    <script type="text/javascript">
+        document.onkeydown = function (e) {
+            if (
+                e.ctrlKey && (
+                    e.keyCode === 67 ||
+                    e.keyCode === 86 ||
+                    e.keyCode === 85 ||
+                    e.keyCode === 117
+                )
+            ) {
+                return false;
+            } else {
+                return true;
+            }
+        };
+    </script>
+</head>
+<body>
+    <div class="sub-main-content">
+        <h1>Education</h1>
+    </div>
+    <div class="sub-main-subcontent">
+        <div class="education">
+            <span>A.    FORMAL</span>
+            <ol type="1">
+                <li>
+                    <p><strong>PADJADJARAN UNIVERSITY</strong></p>
+                    <p>2006 - 2010</p>
+                    <P>Faculty of Social and Political Science</P>
+                    <p>Department of Social Welfare</p>
+                    <p>(Quit in 2010 duo to economic factor)</p>
+                </li>
+                <br>
+                <li>
+                    <p><strong>Senior High School</strong></p>
+                    <p>2002 - 2005</p>
+                    <p>SMU N 2 Bukittinggi</p>
+                </li>
+            </ol>
+        </div>
+        <div class="education">
+            <span>B.    INFORMAL</span>
+            <ol type="1">
+                <li><strong><a href="https://www.udemy.com/" target="_blank">UDEMY</a></strong></li>
+                <li><strong><a href="https://www.dicoding.com/" target="_blank">DICODING ACADEMY</a></strong></li>
+                <li><strong>REFOCUS DIGITAL ACADEMY</strong></li>
+            </ol>
+            <a href="../sub_page/certification.html" style="font-size: 15pt;">Detail Informal Education</a
+        </div>
+    </div>
+</body>
+</html>

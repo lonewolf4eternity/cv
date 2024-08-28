@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<!--<html lang="en">-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>myResume</title>
+    <link rel="stylesheet" href="./css/style.css" type="text/css">
+    <script src="https://kit.fontawesome.com/abadbabf6f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/my_resume.css" type="text/css">
+    <script type="text/javascript">
+        document.addEventListener (
+            'contextmenu', function (e) {
+                e.preventDefault();
+            }
+        );
+    </script>
+    <script type="text/javascript">
+        document.addEventListener (
+            'keydown', function (e) {
+                if (
+                    e.ctrlKey && e.keyCode === 'u'
+                ) {
+                    e.preventDefault();
+                }
+            }
+        );
+    </script>
+    <script type="text/javascript">
+        document.onkeydown = function (e) {
+            if (
+                e.ctrlKey && (
+                    e.keyCode === 67 ||
+                    e.keyCode === 86 ||
+                    e.keyCode === 85 ||
+                    e.keyCode === 117
+                )
+            ) {
+                return false;
+            } else {
+                return true;
+            }
+        };
+    </script>
+    <script type="text/javascript" src="./js/jquery.min.js"></script>
+    <script type="text/javascript">
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-60900704-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+    <script type="text/javascript" src="./js/datetime.js"></script>
+</head>
+<body>
+    <header>
+        <button id="theme-toggle" hidden>Dark Theme</button>
+        <h1 hidden>Welcome to myResume</h1>
+        <div class="header-controls">
+            <nav>
+                <ul>
+                    <li><a href="./index.html">Home&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-home"></i></a></li>
+                    <li><a href="./about_me.html">About Me&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-user"></i></a></li>
+                    <li><a href="./my_resume.html">myResume&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-book"></i></a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="clock" style="text-align: center;">
+            <ul>
+                <li><i class="fa-regular fa-calendar-check"></i>&nbsp;&nbsp;&nbsp;</li>
+                <li id="Date1">,</li>
+                <li>,</li>
+                <li id="Date2"></li>
+                <li id="months"></li>
+                <li id="years"></li>
+                <li id="point">|</li>
+                <li id="hours"></li>
+                <li id="point">:</li>
+                <li id="min"></li>
+                <li id="point">:</li>
+                <li id="sec"></li>
+                <li>&nbsp;&nbsp;&nbsp;<i class="fa-regular fa-clock"></i></li>
+            </ul>
+        </div>
+    </header>
+    <div id="content">
+        <div class="sidebar">
+            <ul><!--
+                <li><a href="../sub_page/biodata.html">Biodata</a></li>-->
+                <li><a href="./sub_page/skill.html"><i class="fa-solid fa-list-check"></i></a></li>
+                <li><a href="./sub_page/experiences.html"><i class="fa-solid fa-sliders"></i></a></li>
+                <li><a href="./sub_page/education.html"><i class="fa-solid fa-user-graduate"></i></a></li>
+                <li><a href="./sub_page/certification.html"><i class="fa-solid fa-certificate"></i></a></li>
+                <li><a href="./sub_page/project.html"><i class="fa-solid fa-diagram-project"></i></a></li>
+            </ul><!--
+            <div class="calendar-content">
+                <div id="clock2" style="text-align: center;">
+                    <div id="months"></div>
+                    <div id="Date1"></div>
+                    <div id="Date2"></div>
+                    <div id="years"></div>
+                </div>
+            </div>-->
+        </div>
+        <div class="main-content">
+            <iframe src="./sub_page/biodata.html" frameborder="0"></iframe>
+        </div><!--
+        <div class="sidebar-right">
+            <img src="../images/img_random/img_008.png" alt="">
+        </div>-->
+    </div>
+    <footer>
+        <p id="copyright"></p>
+        <div class="social-icons">
+            <a href="https://web.facebook.com/revardy.d.caesar/" target="_blank"><img src="./images/icons/facebook.png" alt="facebook"></a>
+            <a href="https://www.linkedin.com/in/amal-rahman-duya-897a59136/" target="_blank"><img src="./images/icons/linkedin.png" alt="linkedin"></a>
+            <a href="https://wa.me/6282173761982" target="_blank"><img src="./images/icons/whatsapp.png" alt="whatsapp"></a>
+        </div>
+    </footer>
+    <script src="./js/theme.js" type="text/javascript"></script>
+    <script src="./js/copyright.js" type="text/javascript"></script>
+    <script>
+        document.addEventListener(
+            "DOMContentLoaded", function () {
+                updateCopyright();
+            }
+        );
+    </script>
+    <script type="text/javascript" src="./js/nav_sidebar_my_resume.js"></script>
+    <script type="text/javascript" src="./js/datetime.js"></script>
+</body>
+</html>
