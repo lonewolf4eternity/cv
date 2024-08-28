@@ -105,31 +105,43 @@ body {
 }
 
 .experiences {
-    font-size: 13;
+    font-size: 20pt;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     color: rgb(249, 248, 242);
     margin-bottom: 50px;
 }
 
 .experiences span {
-    font-size: 15pt;
+    font-size: 20pt;
     font-weight: bolder;
 }
 .experiences p {
     margin: 5px 0;
+    font-size: 17pt;
 }
 
 .experiences li {
     margin-right: 20px;
+    font-size: 17pt;
 }
 
 .experiences li a {
     text-decoration: none;
+    font-size: 17pt;
 }
 
 .experiences ol li a {
     text-decoration: none;
     color: rgb(249, 248, 242);
+    font-size: 17pt;
+}
+
+.experiences li li li {
+    font-size: 17pt;
+}
+
+.experiences ul li {
+    font-size: 17pt;
 }
 
 .education {
