@@ -28,7 +28,7 @@ body {
 }
 
 .sub-main-content p {
-    font-size: 12pt;
+    font-size: 13pt;
     font-family: 'Times New Roman', Times, serif;
     color: rgb(249, 248, 242);
     text-align: justify;
@@ -112,36 +112,36 @@ body {
 }
 
 .experiences span {
-    font-size: 20pt;
+    font-size: 13pt;
     font-weight: bolder;
 }
 .experiences p {
     margin: 5px 0;
-    font-size: 17pt;
+    font-size: 13pt;
 }
 
 .experiences li {
     margin-right: 20px;
-    font-size: 17pt;
+    font-size: 13pt;
 }
 
 .experiences li a {
     text-decoration: none;
-    font-size: 17pt;
+    font-size: 13pt;
 }
 
 .experiences ol li a {
     text-decoration: none;
     color: rgb(249, 248, 242);
-    font-size: 17pt;
+    font-size: 13pt;
 }
 
 .experiences li li li {
-    font-size: 17pt;
+    font-size: 13pt;
 }
 
 .experiences ul li {
-    font-size: 17pt;
+    font-size: 13pt;
 }
 
 .education {
