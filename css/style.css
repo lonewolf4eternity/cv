@@ -124,6 +124,7 @@ main {
     width: 60%;
     padding: 2rem;
     overflow-y: auto;
+    line-height: 1.25;
 }
 
 .main-profile {
@@ -235,7 +236,6 @@ main {
     padding: 10px;
     margin-bottom: 15px;
     text-align: justify;
-    line-height: 1.5;
 }
 
 .info-box h3 {
@@ -294,8 +294,8 @@ aside nav ul li a i:hover {
     transform: translateX(-50%);
     color: gold;
     font-weight: bold;
-    font-size: 13pt;
-    line-height: 20px;
+    font-size: 13pt;/*
+    line-height: 20px;*/
     float: inline-end;
 }
 
@@ -474,16 +474,16 @@ footer{
     color: gold;
     font-weight: bolder;
     padding-left: 20px;
-    margin-left: 20px;
-    line-height: 1.5;
+    margin-left: 20px;/*
+    line-height: 1.5;*/
 }
 
 .experiences-item ul li {
     color: gold;
     font-weight: lighter;
     padding-left: 20px;
-    margin-left: 20px;
-    line-height: 1.5;
+    margin-left: 20px;/*
+    line-height: 1.5;*/
 }
 
 /*
