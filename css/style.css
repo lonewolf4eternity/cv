@@ -784,39 +784,6 @@ footer{
     transform-origin: center center;
 }*/
 
-.main-project h2 {
-    color: yellow;
-    font-size: xx-large;
-}
-
-.main-project p {
-    color: gold;
-}
-
-.project-title {
-    grid-column: 1 / -1;
-    grid-row: 1 / 1;
-    padding-left: 25px;
-    padding-right: 25px;
-}
-
-.project-box {
-    margin-top: 25px;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 20px;
-    justify-items: center;
-    align-items: center;
-    padding: 20px;
-}
-
-.project-maintenance {
-    margin-top: 50px;
-    width: auto; /* Bisa diatur sesuai kebutuhan */
-    height: calc(100vh - 10px); /* 100vh adalah tinggi layar, dikurangi 100px untuk jarak atas dan bawah */
-    background-color: lightgrey;
-}
-
 .tooltip {
     position: relative;
     display: inline-block;
@@ -876,4 +843,170 @@ footer{
     visibility: visible;
     opacity: 1;
     border: 2px solid gold;
+}
+
+.main-project h2 {
+    color: yellow;
+    font-size: xx-large;
+}
+
+.main-project p {
+    color: gold;
+}
+
+.project-title {
+    grid-column: 1 / -1;
+    grid-row: 1 / 1;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.project-box {
+    margin-top: 25px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    justify-items: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.project-maintenance {
+    margin-top: 50px;
+    width: auto; /* Bisa diatur sesuai kebutuhan */
+    height: calc(100vh - 10px); /* 100vh adalah tinggi layar, dikurangi 100px untuk jarak atas dan bawah */
+    background-color: lightgrey;
+}
+
+.project-item {
+    position: relative;
+    background-color: rgba(161, 161, 4, 0.1);
+    color: gold;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    width: 350px;
+    height: 400px;
+    border: 2px solid gold;
+}
+
+/*  
+.project-item h3 {
+    color: rgb(35, 25, 1);
+    font-size: x-large;
+    margin-bottom: 20px;
+    background-color: goldenrod;
+    padding: 20px;
+    text-align: center;
+    height: 100px;
+}*/
+
+.project-item h3 {
+    color: rgb(35, 25, 1);
+    margin-bottom: 20px;
+    background-color: goldenrod;
+    height: 100px;
+    text-align: center;
+    display: flex; /* Mengatur teks agar selalu berada di tengah vertikal */
+    justify-content: center; /* Tengah horizontal */
+    align-items: center; /* Tengah vertikal */
+    font-size: clamp(1rem, 2vw, 2.5rem); /* Ukuran font dinamis */
+}
+
+
+.project-item p {
+    color: gold;
+    font-size: medium;
+    margin-bottom: 15px;
+}
+
+.project-item:hover {
+    transform: scale(1.05);
+    background-color: rgb(35, 25, 1);
+    border: 6px solid goldenrod;
+}
+
+.project-link {
+    position: absolute;
+    right: 25px;
+    bottom: 20px;
+    background-color: gold;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-colow 0.3s;
+    margin-left: 20px;
+    align-items: flex-end;
+}
+
+.project-link:hover {
+    background-color: yellow;
+}
+
+/* Sesuaikan kotak untuk responsif */
+@media (max-width: 768px) {
+    .project-box {
+        grid-template-columns: repeat(2, 1fr); /* 2 kolom untuk ukuran layar lebih kecil */
+    }
+}
+
+@media (max-width: 480px) {
+    .project-box {
+        grid-template-columns: 1fr; /* 1 kolom untuk layar sangat kecil */
+    }
+}
+
+/* Styling untuk ul dan li */
+.project-item ul {
+    list-style-type: disc; /* Gunakan bulatan untuk unordered list */
+    padding-left: 30px; /* Tambah jarak untuk indentasi */
+    margin-top: 15px;
+}
+
+.project-item ul li {
+    color: orange;
+    font-size: medium;
+    margin-bottom: 5px; /* Jarak antar item */
+}
+
+/* Untuk membuat lebih rapi, list-style bisa diubah */
+.project-item ul li::marker {
+    color: gold; /* Warna bullet points */
+    font-size: large; /* Ukuran bullet */
+}
+
+/*  closing the page    */
+.x-btn {
+    top: 0;
+    left: 0;
+    margin-top: 0;
+    margin-left: 5px;
+    margin-right: 5px;
+    border: 2px solid rgb(255, 196, 0);
+    background-color: #000000;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    float: none;
+    width: 50px;
+    height: 50px;
+}
+
+.x-btn i {
+    font-size: x-large;
+    text-align: center;
+    display: flex; /* Mengatur teks agar selalu berada di tengah vertikal */
+    justify-content: center; /* Tengah horizontal */
+    align-items: center; /* Tengah vertikal */
+    font-size: clamp(1rem, 2vw, 2.5rem); /* Ukuran font dinamis */
+}
+
+.x-btn i:hover {
+    background-color: rgb(106, 104, 95);
+    color: yellow;
 }

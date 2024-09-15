@@ -90,3 +90,15 @@ function closeModal() {
     modalImg.style.transform = 'scale(1)';
     modalImg.style.transformOrigin = 'center center';  // Reset to center
 }
+
+//  menutup halaman web
+document.addEventListener('DOMContentLoaded', function () {
+    // Tombol penutup
+    const closeDashboardBtn = document.getElementById('close-dashboard-btn');
+    if (closeDashboardBtn) {
+        closeDashboardBtn.addEventListener('click', function () {
+            // Redirect kembali ke halaman project.html
+            window.location.href = '../../project/index.html';
+        });
+    }
+});
