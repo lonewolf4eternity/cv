@@ -131,8 +131,9 @@ main {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto;
-    grid-gap: 20px;
+    grid-gap: 5px;
     margin: 0 auto;
+    overflow: hidden;
 }
 
 .main-profile h2 {
@@ -210,6 +211,37 @@ main {
     color: yellow;
 }
 
+/*-- profile-socmed-tooltip --*/
+.profile-socmed-tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.profile-socmed-tooltip .profile-socmed-tooltiptext {
+    visibility: hidden;
+    width: 150px;
+    background-color: #212529;
+    color: yellow;
+    text-align: center;
+    border-radius: 10px;
+    padding: 10px;
+    position: absolute;
+    z-index: 1;
+    top: 125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 14pt;
+}
+
+.profile-socmed-tooltip:hover .profile-socmed-tooltiptext {
+    visibility: visible;
+    opacity: 1;
+    border: 2px solid gold;
+}
+/*-- profile-socmed-tooltip --*/
+
 .sidebar-right {
     width: 35%;
     padding: 1rem;
@@ -266,13 +298,18 @@ aside nav ul li a {
     text-decoration: none;
     padding: 5px;
     display: block;
-    border-radius: 3px;
-    transition: background 0.3s;
+    border-radius: 3px;/*
+    transition: background 0.3s;*/
+}
+
+aside nav ul li a title {
+    width: 100px;
 }
 
 aside nav ul li a i:hover {
     color: yellow;
-    width: 40px;
+    transition: background 0.3s;
+    transform: scale(1.5);
 }
 
 .skill-bar-container {
@@ -774,5 +811,69 @@ footer{
 }
 
 .project-maintenance {
-    width: 1000px;
+    margin-top: 50px;
+    width: auto; /* Bisa diatur sesuai kebutuhan */
+    height: calc(100vh - 10px); /* 100vh adalah tinggi layar, dikurangi 100px untuk jarak atas dan bawah */
+    background-color: lightgrey;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 200px;
+    background-color: #212529;
+    color: yellow;
+    text-align: center;
+    border-radius: 10px;
+    padding: 10px;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 500%;
+    margin-left: 0;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 14pt;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+    border: 2px solid gold;
+}
+
+/*  footer-tooltip */
+.footer-tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.footer-tooltip .footer-tooltiptext {
+    visibility: hidden;
+    width: 150px;
+    background-color: #212529;
+    color: yellow;
+    text-align: center;
+    border-radius: 10px;
+    padding: 10px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 14pt;
+}
+
+.footer-tooltip:hover .footer-tooltiptext {
+    visibility: visible;
+    opacity: 1;
+    border: 2px solid gold;
 }
