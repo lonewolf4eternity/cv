@@ -423,7 +423,6 @@ aside nav ul li a i:hover {
     background-color: rgba(255, 255, 255, 0.05);
 }
 
-
 .skill-icon p {
     margin: 10px 0;
     color: gold;
@@ -602,9 +601,11 @@ footer{
 }
 
 .edu-icon {
-    width: auto;
-    height: 75px;
+    width: 100px;
+    height: 100px;
     margin-right: 25px;
+    border: 3px solid yellow;
+    border-radius: 50%;
 }
 
 .carousel {
@@ -621,8 +622,9 @@ footer{
 
 .carousel-images img {
     width: auto;
-    height: 150px;
+    height: 200px;
     margin: 0 20px;
+    border-radius: 50%;
 }
 
 .carousel-images::before {
