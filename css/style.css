@@ -389,7 +389,7 @@ aside nav ul li a i:hover {
     margin-top: 25px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: 20px;
+    grid-gap: 15px;
     justify-items: center;
     align-items: center;
     padding: 20px;
@@ -399,7 +399,9 @@ aside nav ul li a i:hover {
     width: 265px;
     height: 300px;
     text-align: center;
-    padding: 25px;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
     background-color: rgba(255, 255, 255, 0.05);
     border-radius: 15px;
     transition: transform 0.3s, background-color 0.3s;
@@ -407,8 +409,20 @@ aside nav ul li a i:hover {
 
 .skill-icon img {
     width: 150px;
+    background-color: rgba(255, 255, 0, 0.1);
     margin-bottom: 10px;
+    border: 3px solid yellow;
+    border-radius: 50%;
+    box-shadow: 0px 5px 15px rgb(179, 203, 237), 0px 5px 10px rgba(241, 214, 139, 0.9) inset;
 }
+
+.skill-icon img:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.4), 0px 5px 10px rgba(255, 255, 255, 0.2) inset;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
 
 .skill-icon p {
     margin: 10px 0;
@@ -419,6 +433,18 @@ aside nav ul li a i:hover {
     transform: scale(1.05);
     background-color: rgba(255, 255, 0, 0.1);
     border: 2px solid goldenrod;
+}
+
+@media (max-width: 768px) {
+    .skill-box {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .skill-box {
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
 
 .skil-stars {
@@ -989,7 +1015,7 @@ footer{
     background-color: #000000;
     color: white;
     padding: 10px;
-    border-radius: 5px;
+    border-radius: 50%;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
     float: none;
@@ -1009,4 +1035,5 @@ footer{
 .x-btn i:hover {
     background-color: rgb(106, 104, 95);
     color: yellow;
+    border-radius: 50%;
 }
