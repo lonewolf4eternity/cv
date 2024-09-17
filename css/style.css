@@ -892,7 +892,7 @@ footer{
 .project-box {
     margin-top: 25px;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-gap: 20px;
     justify-items: center;
     align-items: center;
@@ -902,7 +902,7 @@ footer{
 .project-maintenance {
     margin-top: 50px;
     width: auto; /* Bisa diatur sesuai kebutuhan */
-    height: calc(100vh - 10px); /* 100vh adalah tinggi layar, dikurangi 100px untuk jarak atas dan bawah */
+    height: calc(100vh - 100px); /* 100vh adalah tinggi layar, dikurangi 100px untuk jarak atas dan bawah */
     background-color: lightgrey;
 }
 
@@ -1038,4 +1038,137 @@ footer{
     background-color: rgb(106, 104, 95);
     color: yellow;
     border-radius: 50%;
+}
+
+.ndt-project-box {
+    margin-top: 25px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 0;
+    justify-items: flex-start;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.ndt-project-item {
+    position: relative;
+    background-color: rgba(161, 161, 4, 0.1);
+    color: gold;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: auto;
+    height: auto;
+    border: 2px solid gold;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1px;
+}
+
+.ndt-project-item img {
+    width: 75px;
+    height: 75px;
+    padding: 0;
+    margin: 0;
+    border: 2px solid goldenrod;
+    object-fit: cover;
+}
+
+.ndt-project-item a {
+    grid-column: span 4;
+    color: rgb(35, 25, 1);
+    margin-top: 20px;
+    background-color: goldenrod;/*
+    height: 100px;
+    text-align: center;*/
+    padding: 20px;
+    font-size: clamp(1rem, 2vw, 2.5rem); /* Ukuran font dinamis */
+    text-align: center;
+}
+
+.ndt-project-item a {
+    text-decoration: none;
+}
+
+.ndt-project-item a:hover {
+    text-decoration: underline;
+    color: goldenrod;
+    background-color: rgb(69, 66, 4);
+}
+
+.ndt-project-item p {
+    color: gold;
+    font-size: medium;
+    margin-bottom: 15px;
+}
+
+/*
+.ndt-project-item:hover {/*
+    transform: scale(1.05);*//*
+    background-color: rgb(35, 25, 1);
+    border: 6px solid goldenrod;
+}*/
+
+/*
+.ndt-project-link {
+    position: absolute;
+    right: 25px;
+    bottom: 20px;
+    background-color: gold;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-colow 0.3s;
+    margin-left: 20px;
+    align-items: flex-end;
+}
+
+.ndt-project-link:hover {
+    background-color: yellow;
+}*/
+
+/* Sesuaikan kotak untuk responsif */
+@media (max-width: 768px) {
+    .ndt-project-box {
+        grid-template-columns: repeat(2, 1fr); /* 2 kolom untuk ukuran layar lebih kecil */
+    }
+}
+
+@media (max-width: 480px) {
+    .ndt-project-box {
+        grid-template-columns: 1fr; /* 1 kolom untuk layar sangat kecil */
+    }
+}
+
+/* Styling untuk ul dan li */
+.ndt-project-item ul {
+    list-style-type: disc; /* Gunakan bulatan untuk unordered list */
+    padding-left: 30px; /* Tambah jarak untuk indentasi */
+    margin-top: 10px;
+}
+
+.ndt-project-item ol {
+    grid-column: span 4;
+    text-align: left;
+    padding: 20px;
+}
+
+.ndt-project-item ol li {
+    padding-left: 20px;
+}
+
+.ndt-project-item ul li {
+    color: orange;
+    font-size: medium;
+    margin-bottom: 5px; /* Jarak antar item */
+    padding-left: 20px;
+}
+
+/* Untuk membuat lebih rapi, list-style bisa diubah */
+.ndt-project-item ul li::marker {
+    color: gold; /* Warna bullet points */
+    font-size: large; /* Ukuran bullet */
 }
