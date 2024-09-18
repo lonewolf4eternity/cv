@@ -119,6 +119,42 @@ header {
     font-size: 18pt;
 }
 
+/*  tooltip container left side corner  */
+/* Tooltip container */
+.tooltip-container {
+    position: absolute;
+    bottom: 10px; /* Tooltip berada di dekat sudut kiri bawah */
+    left: 10px;
+    background-color: rgba(0, 0, 0, 0.8); /* Warna background hitam dengan transparansi */
+    padding: 25px;
+    border: 2px solid gold;
+    border-radius: 8px;
+    width: 300px; /* Lebar maksimal tooltip */
+    display: none; /* Mulanya disembunyikan */
+    z-index: 1000; /* Agar berada di atas elemen lain */
+}
+
+/* Styling untuk judul tooltip */
+.tooltip-container .tooltip-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: yellow;
+}
+
+/* Styling untuk deskripsi tooltip */
+.tooltip-container .tooltip-description {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    color: goldenrod;
+}
+
+/* Tampilan tooltip ketika muncul */
+.tooltip-container.show {
+    display: block;
+}
+/*  end of tooltip container    */
+
 main {
     flex-grow: 1;
     width: 60%;
@@ -191,8 +227,8 @@ main {
 }
 
 .profile-social-media {
-    padding-left: 25px;
-    padding-right: 25px;;
+    padding-left: 20px;
+    padding-right: 20px;;
     grid-column: 2/3;
     grid-row: 4 / 5;
 }
@@ -210,37 +246,6 @@ main {
 .profile-social-media i:hover {
     color: yellow;
 }
-
-/*-- profile-socmed-tooltip --*/
-.profile-socmed-tooltip {
-    position: relative;
-    display: inline-block;
-}
-
-.profile-socmed-tooltip .profile-socmed-tooltiptext {
-    visibility: hidden;
-    width: 150px;
-    background-color: #212529;
-    color: yellow;
-    text-align: center;
-    border-radius: 10px;
-    padding: 10px;
-    position: absolute;
-    z-index: 1;
-    top: 125%;
-    left: 50%;
-    margin-left: -60px;
-    opacity: 0;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    font-size: 14pt;
-}
-
-.profile-socmed-tooltip:hover .profile-socmed-tooltiptext {
-    visibility: visible;
-    opacity: 1;
-    border: 2px solid gold;
-}
-/*-- profile-socmed-tooltip --*/
 
 .sidebar-right {
     width: 35%;
@@ -807,72 +812,6 @@ footer{
     transform: scale(1);
 }
 
-/*
-.zoomed {
-    transform-origin: center center;
-}*/
-
-.tooltip {
-    position: relative;
-    display: inline-block;
-}
-
-.tooltip .tooltiptext {
-    visibility: hidden;
-    width: 200px;
-    background-color: #212529;
-    color: yellow;
-    text-align: center;
-    border-radius: 10px;
-    padding: 10px;
-    position: absolute;
-    z-index: 1;
-    top: 0;
-    left: 500%;
-    margin-left: 0;
-    transform: translateX(-50%);
-    opacity: 0;
-    transition: opacity 0.3s;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    font-size: 14pt;
-}
-
-.tooltip:hover .tooltiptext {
-    visibility: visible;
-    opacity: 1;
-    border: 2px solid gold;
-}
-
-/*  footer-tooltip */
-.footer-tooltip {
-    position: relative;
-    display: inline-block;
-}
-
-.footer-tooltip .footer-tooltiptext {
-    visibility: hidden;
-    width: 150px;
-    background-color: #212529;
-    color: yellow;
-    text-align: center;
-    border-radius: 10px;
-    padding: 10px;
-    position: absolute;
-    z-index: 1;
-    bottom: 125%;
-    left: 50%;
-    margin-left: -60px;
-    opacity: 0;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    font-size: 14pt;
-}
-
-.footer-tooltip:hover .footer-tooltiptext {
-    visibility: visible;
-    opacity: 1;
-    border: 2px solid gold;
-}
-
 .main-project h2 {
     color: yellow;
     font-size: xx-large;
@@ -1006,40 +945,6 @@ footer{
     font-size: large; /* Ukuran bullet */
 }
 
-/*  closing the page    */
-.x-btn {
-    top: 0;
-    left: 0;
-    margin-top: 0;
-    margin-left: 5px;
-    margin-right: 5px;
-    border: 2px solid rgb(255, 196, 0);
-    background-color: #000000;
-    color: white;
-    padding: 10px;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
-    float: none;
-    width: 50px;
-    height: 50px;
-}
-
-.x-btn i {
-    font-size: x-large;
-    text-align: center;
-    display: flex; /* Mengatur teks agar selalu berada di tengah vertikal */
-    justify-content: center; /* Tengah horizontal */
-    align-items: center; /* Tengah vertikal */
-    font-size: clamp(1rem, 2vw, 2.5rem); /* Ukuran font dinamis */
-}
-
-.x-btn i:hover {
-    background-color: rgb(106, 104, 95);
-    color: yellow;
-    border-radius: 50%;
-}
-
 .ndt-project-box {
     margin-top: 25px;
     display: grid;
@@ -1085,9 +990,6 @@ footer{
     padding: 20px;
     font-size: clamp(1rem, 2vw, 2.5rem); /* Ukuran font dinamis */
     text-align: center;
-}
-
-.ndt-project-item a {
     text-decoration: none;
 }
 
@@ -1102,33 +1004,6 @@ footer{
     font-size: medium;
     margin-bottom: 15px;
 }
-
-/*
-.ndt-project-item:hover {/*
-    transform: scale(1.05);*//*
-    background-color: rgb(35, 25, 1);
-    border: 6px solid goldenrod;
-}*/
-
-/*
-.ndt-project-link {
-    position: absolute;
-    right: 25px;
-    bottom: 20px;
-    background-color: gold;
-    color: black;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background-colow 0.3s;
-    margin-left: 20px;
-    align-items: flex-end;
-}
-
-.ndt-project-link:hover {
-    background-color: yellow;
-}*/
 
 /* Sesuaikan kotak untuk responsif */
 @media (max-width: 768px) {
@@ -1171,4 +1046,73 @@ footer{
 .ndt-project-item ul li::marker {
     color: gold; /* Warna bullet points */
     font-size: large; /* Ukuran bullet */
+}
+
+.ndt-project-item-gallery {
+    position: relative;
+    background-color: rgba(161, 161, 4, 0.1);
+    color: gold;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: auto;
+    height: auto;
+    border: 2px solid gold;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1px;
+}
+
+.ndt-project-item-gallery img {
+    width: 75px;
+    height: 75px;
+    padding: 0;
+    margin: 0;
+    border: 2px solid goldenrod;
+    object-fit: cover;
+}
+
+.ndt-project-item-gallery a {
+    grid-column: span 4;
+    color: rgb(35, 25, 1);
+    margin-top: 20px;
+    background-color: goldenrod;/*
+    height: 100px;
+    text-align: center;*/
+    padding: 20px;
+    font-size: clamp(1rem, 2vw, 2.5rem); /* Ukuran font dinamis */
+    text-align: center;
+    text-decoration: none;
+}
+
+.ndt-project-item-gallery a:hover {
+    text-decoration: underline;
+    color: goldenrod;
+    background-color: rgb(69, 66, 4);
+}
+
+.ndt-project-item-gallery p {
+    color: gold;
+    font-size: medium;
+    margin-bottom: 15px;
+}
+
+.ndt-project-item-preview {
+    position: relative;
+    background-color: rgba(161, 161, 4, 0.1);
+    color: gold;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: auto;
+    height: auto;
+}
+
+.ndt-project-item-preview img {
+    width: 200%; /* Sesuaikan ukuran gambar preview */
+    height: auto;
+    border: 2px solid goldenrod;
+    padding: 10px;
+    border-radius: 20px;
 }

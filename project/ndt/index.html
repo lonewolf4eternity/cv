@@ -24,15 +24,14 @@
             </div>
         </div>
         <div class="header-right">
-            <nav hidden>
-                <ul>
-                    <li><a href="../../index.html"><i class="fa-solid fa-house-chimney"></i>&nbsp;&nbsp;&nbsp;Home</a></li>
-                    <li><a href="../index.html"><i class="fa-solid fa-screwdriver-wrench"></i>&nbsp;&nbsp;&nbsp;My Project</a></li>
-                </ul>
-            </nav>
             <nav>
                 <ul>
-                    <li><a href="#" class="x-btn tooltip" id="close-dashboard-btn"><i class="fa-regular fa-circle-xmark"></i><span class="tooltiptext">Close</span></a></li>
+                    <li hidden><a href="../../index.html"><i class="fa-solid fa-house-chimney"></i>&nbsp;&nbsp;&nbsp;Home</a></li>
+                    <li hidden><a href="../index.html"><i class="fa-solid fa-screwdriver-wrench"></i>&nbsp;&nbsp;&nbsp;My Project</a></li>
+                    <li><a href="#" class="tooltip" id="close-dashboard-btn" data-title="Close" data-description="Menutup halaman ini dan kembali ke halaman My Project"><i class="fa-regular fa-circle-xmark"></i></a></li>
+                    <li><a href="./index.html" class="tooltip" data-title="NDT" data-description="Halaman utama NDT yang menampilkan overview proyek yang telah di kerjakan."><i class="fa-solid fa-display"></i>&nbsp;&nbsp;&nbsp;NDT</a></li>
+                    <li><a href="./gallery/index.html" class="tooltip" data-title="Gallery" data-description="Halaman yang berisi foto-foto selama pengerjaan proyek."><i class="fa-regular fa-images"></i>&nbsp;&nbsp;&nbsp;Gallery</a></li>
+                    <li><a href="./job-list/index.html" class="tooltip" data-title="Job List" data-description="Halaman yang berisi proyek-proyek yang dikerjakan."><i class="fa-solid fa-laptop-file"></i>&nbsp;&nbsp;&nbsp;Job List</a></li>
                 </ul>
             </nav>
         </div>
@@ -50,8 +49,9 @@
             </nav>
             <nav>
                 <ul>
-                    <li><a href="./gallery/index.html" class="tooltip"><i class="fa-regular fa-images"></i><span class="tooltiptext">Gallery</span></a></li>
-                    <li><a href="./job-list/index.html" class="tooltip"><i class="fa-solid fa-laptop-file"></i><span class="tooltiptext">Job List</span></a></li>
+                    <li><a href="./index.html" class="tooltip" data-title="NDT" data-description="Halaman utama NDT yang menampilkan overview proyek yang telah di kerjakan."><i class="fa-solid fa-display"></i></a></li>
+                    <li><a href="./gallery/index.html" class="tooltip" data-title="Gallery" data-description="Halaman yang berisi foto-foto selama pengerjaan proyek."><i class="fa-regular fa-images"></i></a></li>
+                    <li><a href="./job-list/index.html" class="tooltip" data-title="Job List" data-description="Halaman yang berisi proyek-proyek yang dikerjakan."><i class="fa-solid fa-laptop-file"></i></a></li>
                 </ul>
             </nav>
         </aside>
@@ -79,8 +79,7 @@
                         <img src="../../image/project/ndt/ndt-13.jpg" alt="ndt-13">
                         <img src="../../image/project/ndt/ndt-14.jpg" alt="ndt-14">
                         <img src="../../image/project/ndt/ndt-15.jpg" alt="ndt-15">
-                        <img src="../../image/project/ndt/ndt-16.jpg" alt="ndt-16"><!--
-                        <h3><a href="./gallery/index.html">Gallery</a></h3>-->
+                        <img src="../../image/project/ndt/ndt-16.jpg" alt="ndt-16">
                         <a href="./gallery/index.html"><h3>Gallery</h3></a>
                     </div>
                     <div class="ndt-project-item" style="grid-column: span 2;">
@@ -105,12 +104,12 @@
                 <div class="skill-footer">
                     <p><i class="fa-regular fa-copyright"></i>&nbsp;&nbsp;&nbsp;Copyright 2024</p>
                     <div class="skill-footer-socmed">
-                        <a href="https://web.facebook.com/revardy.d.caesar/" target="_blank" class="footer-tooltip"><i class="fa-brands fa-facebook"></i><span class="footer-tooltiptext">Facebook</span></a>
-                        <a href="https://www.linkedin.com/in/amal-rahman-duya-897a59136/" target="_blank" class="footer-tooltip"><i class="fa-brands fa-linkedin"></i><span class="footer-tooltiptext">Linkedin</span></a>
-                        <a href="https://www.instagram.com/lonewolf4eternity/" target="_blank" class="footer-tooltip"><i class="fa-brands fa-instagram"></i><span class="footer-tooltiptext">Instagram</span></a>
-                        <a href="https://github.com/lonewolf4eternity" target="_blank" class="footer-tooltip"><i class="fa-brands fa-github"></i><span class="footer-tooltiptext">Github</span></a>
-                        <a href="mailto:amalrahmanduya@gmail.com" target="_blank" class="footer-tooltip"><i class="fa-brands fa-google"></i><span class="footer-tooltiptext">G-Mail</span></a>
-                        <a href="https://wa.me/6282173761982" target="_blank" class="footer-tooltip"><i class="fa-brands fa-whatsapp"></i><span class="footer-tooltiptext">WhatsApp</span></a>
+                        <a href="https://web.facebook.com/revardy.d.caesar/" target="_blank" class="tooltip" data-title="Facebook" data-description="Akun sosial media Facebook."><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.linkedin.com/in/amal-rahman-duya-897a59136/" target="_blank" class="tooltip" data-title="Linkedin" data-description="Akun sosial media Linkedin - situs pencari kerja."><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/lonewolf4eternity/" target="_blank" class="tooltip" data-title="Instagram" data-description="Akun sosial media Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://github.com/lonewolf4eternity" target="_blank" class="tooltip" data-title="Github" data-description="Akun penyimpanan code."><i class="fa-brands fa-github"></i></a>
+                        <a href="mailto:amalrahmanduya@gmail.com" target="_blank" class="tooltip" data-title="G-mail" data-description="Mari berikirim e-mail dengan saya."><i class="fa-brands fa-google"></i></a>
+                        <a href="https://wa.me/6282173761982" target="_blank" class="tooltip" data-title="WhatsApp" data-description="Hallo..  ingin berbincang dengan saya? Silahkan chat ke nomor ini. Terima Kasih."><i class="fa-brands fa-whatsapp"></i></a>
                     </div>
                     <p><i class="fa-solid fa-code"></i>&nbsp;&nbsp;&nbsp;Revardy D. Chester. All Rights Reserved.</p>
                 </div>

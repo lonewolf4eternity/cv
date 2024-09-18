@@ -102,3 +102,61 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 });
+
+//  membuat tooltip
+document.addEventListener('DOMContentLoaded', function() {
+    // Temukan semua elemen dengan class tooltip
+    const tooltips = document.querySelectorAll('.tooltip');
+    const tooltipContainer = document.createElement('div');
+    
+    // Buat elemen container tooltip
+    tooltipContainer.classList.add('tooltip-container');
+    tooltipContainer.innerHTML = `
+        <div class="tooltip-title"></div>
+        <div class="tooltip-description"></div>
+    `;
+    
+    // Tambahkan container ke dalam body
+    document.body.appendChild(tooltipContainer);
+    
+    // Tambahkan event listener untuk mouseover dan mouseout pada elemen tooltip
+    tooltips.forEach(function(tooltip) {
+        tooltip.addEventListener('mouseover', function() {
+            const title = this.getAttribute('data-title');
+            const description = this.getAttribute('data-description');
+            
+            // Isi judul dan deskripsi tooltip
+            tooltipContainer.querySelector('.tooltip-title').textContent = title;
+            tooltipContainer.querySelector('.tooltip-description').textContent = description;
+            
+            // Tampilkan tooltip
+            tooltipContainer.classList.add('show');
+        });
+        
+        tooltip.addEventListener('mouseout', function() {
+            // Sembunyikan tooltip
+            tooltipContainer.classList.remove('show');
+        });
+    });
+});
+
+//  preview image
+// Ambil elemen preview
+const previewImg = document.getElementById('preview-img');
+
+// Ambil semua gambar di dalam ndt-project-item-gallery
+const galleryImgs = document.querySelectorAll('.ndt-project-item-gallery img');
+
+// Iterasi melalui setiap gambar di galeri
+galleryImgs.forEach(img => {
+    // Ketika mouse berada di atas gambar
+    img.addEventListener('mouseover', function() {
+        // Ubah src dari gambar preview dengan src dari gambar yang di-hover
+        previewImg.src = this.src;
+    });
+
+    // Ketika mouse meninggalkan gambar, kembali ke gambar default
+    img.addEventListener('mouseout', function() {
+        previewImg.src = '../../../image/project/ndt/ndt-01.jpg'; // Gambar default
+    });
+});
