@@ -64,7 +64,7 @@
                     <p style="font-weight: bolder; text-decoration: underline; font-style: italic;">DISCLAIMER</p>
                     <p style="font-style: italic;">Untuk menjaga kerahasiaan dokumen client, file-file tidak akan disertakan dalam database website ini. Hanya menampilkan daftar nama Badan Hukum terkait.</p>
                 </div>
-                <img src="../../image/maintenance/maintenance.jpg" alt="maintenance" class="project-maintenance">
+                <img src="../../image/maintenance/maintenance.jpg" alt="maintenance" class="project-maintenance" hidden>
                 <div class="ndt-project-box" style="display: none;">
                     <div class="ndt-project-item">
                         <img src="../../image/project/ndt/ndt-01.jpg" alt="ndt-01">
@@ -100,6 +100,315 @@
                             </li>
                         </ol>
                         <a href="./job-list/index.html"><h3>Job List</h3></a>
+                    </div>
+                </div>
+                <div class="tab-container">
+                    <div class="tab-buttons">
+                        <button class="tab-button active" onclick="showTab(event, 'pt')" style="background-image: url(https://ahu.go.id/themes/corporate/assets/img/image/icon-app/ahu-icon-4.png); background-repeat: no-repeat;">Perseroan Terbatas (PT)</button>
+                        <button class="tab-button" onclick="showTab(event, 'cv')" style="background-image: url(https://ahu.go.id/themes/corporate/assets/img/image/icon-app/logo_sabu.png); background-repeat: no-repeat;">Persekutuan Komanditer (CV)</button>
+                        <button class="tab-button" onclick="showTab(event, 'yayasan')" style="background-image: url(https://ahu.go.id/themes/corporate/assets/img/image/icon-app/ahu-icon-8.png); background-repeat: no-repeat;">Yayasan</button>
+                        <button class="tab-button" onclick="showTab(event, 'perkumpulan')" style="background-image: url(https://ahu.go.id/themes/corporate/assets/img/image/icon-app/ahu-icon-6.png); background-repeat: no-repeat;">Perkumpulan</button>
+                    </div>
+                    <div class="search-container">
+                        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                        <input type="text" id="searchInput" placeholder="Cari di dalam tabel..." onkeyup="searchTable()">
+                        <i class="fa-solid fa-xmark clear-icon" onclick="clearSearch()"></i>
+                    </div>
+                    <div class="tab-content" id="pt" style="display: block;">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>No.</th>
+                                    <th>Nama Badan</th>
+                                    <th>Tanggal Akta</th>
+                                    <th>Jenis Akta</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>PT. ABC</td>
+                                    <td>12-01-2020</td>
+                                    <td>Pendirian</td>
+                                </tr>
+                                <!-- Tambahkan baris lainnya sesuai data -->
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="tab-content" id="cv">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>No.</th>
+                                    <th>Nama Badan</th>
+                                    <th>Nomor Akta</th>
+                                    <th>Tanggal Akta</th>
+                                    <th>Jenis Akta</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td></td>
+                                    <td>CV.BIMA PRATAMA</td>
+                                    <td>07 / 2020</td>
+                                    <td>13-10-2020</td>
+                                    <td>Perubahan</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>CV.AKYYA PUTRA MANDIRI</td>
+                                    <td>04 / 2020</td>
+                                    <td>07-10-2020</td>
+                                    <td>Perubahan</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>CV.RIDWAN JAYA KARYA</td>
+                                    <td>17 / 2020</td>
+                                    <td>29-07-2020</td>
+                                    <td>Perubahan</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>CV.INDIGO JAYA</td>
+                                    <td>07 / 2020</td>
+                                    <td>19-06-2020</td>
+                                    <td>Perubahan</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>CV.ARSYILA</td>
+                                    <td>04 / 2020</td>
+                                    <td>15-06-2020</td>
+                                    <td>Perubahan</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>CV.USAHA MUDA</td>
+                                    <td>06 / 2020</td>
+                                    <td>16-03-2020</td>
+                                    <td>Perubahan</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>CV.FIZNI FA’L MANDIRI</td>
+                                    <td>05 / 2020</td>
+                                    <td>12-03-2020</td>
+                                    <td>Perubahan</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>CV.ADE BUSANA COLLECTION</td>
+                                    <td>17 / 2020</td>
+                                    <td>27-02-2020</td>
+                                    <td>Perubahan</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>CV.PORSE JAYA AGROTAMA (PJA)</td>
+                                    <td>07 / 2020</td>
+                                    <td>11-02-2020</td>
+                                    <td>Perubahan</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>CV. FARSYA STORY PERDANA (FSP)</td>
+                                    <td>03 / 2020</td>
+                                    <td>16-01-2020</td>
+                                    <td>Perubahan</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>CV. BERSAMA GRUB</td>
+                                    <td>01 / 2020</td>
+                                    <td>10-01-2020</td>
+                                    <td>Perubahan</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>CV. FARSYA STORY PERDANA (FSP)</td>
+                                    <td>08 / 2019</td>
+                                    <td>23-12-2019</td>
+                                    <td>Pendirian</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>CV. POLITEKNIK TIGA UTAMA</td>
+                                    <td>10 / 2019</td>
+                                    <td>27-11-2019</td>
+                                    <td>Perubahan</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>CV. FRESSY CITA RADILA (FCR)</td>
+                                    <td>02 / 2019</td>
+                                    <td>01-11-2019</td>
+                                    <td>Pendirian</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>CV. TYARA</td>
+                                    <td>04 / 2019</td>
+                                    <td>17-10-2019</td>
+                                    <td>Perubahan</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>CV. LARAS JAYA AABADI (LAYA)</td>
+                                    <td>01 / 2019</td>
+                                    <td>02-10-2019</td>
+                                    <td>Pendirian</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>CV. AZA KARYA PRATAMA</td>
+                                    <td>10 / 2019</td>
+                                    <td>28-09-2019</td>
+                                    <td>Perubahan</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>CV. WARUNG DISAIN</td>
+                                    <td>10 / 2019</td>
+                                    <td>26-10-2019</td>
+                                    <td>Pendirian</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>CV. KEMALA SEJAHTERA MANDIRI (KESEMA)</td>
+                                    <td>09 / 2019</td>
+                                    <td>23-09-2019</td>
+                                    <td>Pendirian</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>CV. HARAPAN MUTIA</td>
+                                    <td>07 / 2019</td>
+                                    <td>12-09-2019</td>
+                                    <td>Perubahan</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>CV. PROJEKA</td>
+                                    <td>11 / 2019</td>
+                                    <td>31-08-2019</td>
+                                    <td>Perubahan</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>CV. FAFAALFA</td>
+                                    <td>09 / 2019</td>
+                                    <td>30-08-2019</td>
+                                    <td>Perubahan</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>CV. RIDWAN JAYA KARYA</td>
+                                    <td>08 / 2019</td>
+                                    <td>30-08-2019</td>
+                                    <td>Perubahan</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>CV. EKA JAYA ABADI</td>
+                                    <td>07 / 2019</td>
+                                    <td>30-08-2019</td>
+                                    <td>Perubahan</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>CV. PORSE JAYA AGROTAMA (PJA)</td>
+                                    <td>06 / 2019</td>
+                                    <td>26-08-2019</td>
+                                    <td>Pendirian</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>CV. COSMETICS KEMPO INDUSTRI (COIN)</td>
+                                    <td>06 / 2019</td>
+                                    <td>30-07-2019</td>
+                                    <td>Pendirian</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>CV. AUTO BLITZ</td>
+                                    <td>01 / 2019</td>
+                                    <td>02-05-2019</td>
+                                    <td>Perubahan</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>CV. JAMALUS FAMILY SEJAHTERA (JFS)</td>
+                                    <td>14 / 2019</td>
+                                    <td>26-03-2019</td>
+                                    <td>Pendirian</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>CV. RAJO ALAM SUKSES (RAS)</td>
+                                    <td>08 / 2019</td>
+                                    <td>20-03-2019</td>
+                                    <td>Pendirian</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>CV. KEJULASI</td>
+                                    <td>07 / 2019</td>
+                                    <td>27-02-2019</td>
+                                    <td>Pendirian</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>CV. KELOMPOK KELUARGA MARGA SILIMA</td>
+                                    <td>05 / 2018</td>
+                                    <td>22-12-2018</td>
+                                    <td>Pendirian</td>
+                                </tr>
+                                <!-- Tambahkan baris lainnya sesuai data -->
+                            </tbody>
+                        </table>
+                    </div>            
+                    <div class="tab-content" id="yayasan">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>No.</th>
+                                    <th>Nama Badan</th>
+                                    <th>Tanggal Akta</th>
+                                    <th>Jenis Akta</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Yayasan ABC</td>
+                                    <td>05-03-2019</td>
+                                    <td>Pendirian</td>
+                                </tr>
+                                <!-- Tambahkan baris lainnya sesuai data -->
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="tab-content" id="perkumpulan">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>No.</th>
+                                    <th>Nama Badan</th>
+                                    <th>Tanggal Akta</th>
+                                    <th>Jenis Akta</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Perkumpulan XYZ</td>
+                                    <td>15-04-2017</td>
+                                    <td>Pendirian</td>
+                                </tr>
+                                <!-- Tambahkan baris lainnya sesuai data -->
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
