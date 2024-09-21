@@ -248,33 +248,3 @@ document.getElementById('searchInput').addEventListener('input', function() {
         document.querySelector('.clear-icon').style.display = 'none'; // Sembunyikan ikon xmark
     }
 });
-
-/*
-//  pencarian pada tabel
-function searchTable() {
-    // Ambil input dari pengguna
-    var input = document.getElementById("searchInput").value.toLowerCase();
-    var table = document.getElementById("myTable");
-    var tr = table.getElementsByTagName("tr");
-    var nomor = 1;
-
-    // Loop melalui semua baris, dan sembunyikan yang tidak sesuai dengan pencarian
-    for (var i = 1; i < tr.length; i++) {
-        var td = tr[i].getElementsByTagName("td");
-        if (td) {
-            // Gabungkan konten dari kolom yang ingin di cari (misalnya kolom Nama Badan dan Jenis Akta)
-            var textValue = (td[1].textContent || td[1].innerText).toLowerCase() + " " +
-                            (td[3].textContent || td[3].innerText).toLowerCase();
-
-            if (textValue.indexOf(input) > -1) {
-                tr[i].style.display = "";
-                // Update nomor agar berurutan sesuai dengan hasil pencarian
-                td[0].textContent = nomor;
-                nomor++;
-            } else {
-                tr[i].style.display = "none";
-            }
-        }
-    }
-}
-*/
