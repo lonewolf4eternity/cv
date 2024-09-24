@@ -1131,13 +1131,14 @@ footer{
 .tab-buttons {
     display: flex;
     justify-content: space-around;
+    align-items: center;
     background-color: #555555;
-    height: 140px;
+    height: 150px;
     padding: 20px;
 }
 
 .tab-button {
-    padding: 10px 20px;
+    padding: 20px;
     background-color: transparent;
     width: 120px;
     height: 120px;
@@ -1156,7 +1157,22 @@ footer{
 
 .tab-button.active, .tab-button:hover {
     transform: translateY(-3px); /* Efek hover tombol naik sedikit */
-    background-color: inherit;
+}
+
+.tab-button-pt:hover {
+    background-color: orange;
+}
+
+.tab-button-cv:hover {
+    background-color: darkblue;
+}
+
+.tab-button-yayasan:hover {
+    background-color: greenyellow;
+}
+
+.tab-button-perkumpulan:hover {
+    background-color: deeppink;
 }
 
 .tab-content {
@@ -1166,6 +1182,14 @@ footer{
     border: 2px solid #ccc;
     border-top: none;
     border-radius: 0 0 20px 20px; /* Membuat sudut bawah melengkung */
+}
+
+.tab-content h3 {
+    font-size: xx-large;
+    font-weight: bolder;
+    color: yellow;
+    font-style: italic;
+    text-decoration: overline underline;
 }
 
 table {
