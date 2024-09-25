@@ -62,7 +62,7 @@ header {
 }
 
 .header-center {
-    width: 25%;
+    width: 20%;
     text-align: justify;
 }
 
@@ -80,7 +80,7 @@ header {
 }
 
 .header-right {
-    width: 40%;
+    width: 45%;
 }
 
 .header-right nav ul {
@@ -100,10 +100,14 @@ header {
     transition: background-color 0.3s;
 }
 
+.header-right nav ul li a img {
+    width: 75px;
+}
+
 .header-right nav ul li a:hover {
-    background-color: yellow;
+    background-color: #190397;
     border-radius: 10px;
-    color: black;
+    color: #850629;
     font-weight: bolder;
 }
 
@@ -117,6 +121,12 @@ header {
     padding: 1rem;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
     font-size: 18pt;
+}
+
+.sidebar-left img {
+    height: 15px;
+    width: 50px;
+    image-resolution: 15px 50px;
 }
 
 /*  tooltip container left side corner  */
