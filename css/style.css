@@ -105,9 +105,9 @@ header {
 }
 
 .header-right nav ul li a:hover {
-    background-color: #190397;
+    background-color: rgb(146, 126, 16);
     border-radius: 10px;
-    color: #850629;
+    color: rgb(243, 231, 231);
     font-weight: bolder;
 }
 
@@ -126,7 +126,6 @@ header {
 .sidebar-left img {
     height: 15px;
     width: 50px;
-    image-resolution: 15px 50px;
 }
 
 /*  tooltip container left side corner  */
@@ -1380,3 +1379,70 @@ tbody tr:hover {
     color: gold; /* Warna bullet points */
     font-size: large; /* Ukuran bullet */
 }
+
+/*  maven market project start  */
+/* Styling untuk maven tab */
+.maven-tabs {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 20px;
+    background-image: url(../image/project/jda/maven-market/maven.png);
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 50px;
+}
+
+.maven-tablink {
+    background-color: transparent;
+    color: yellowgreen;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    transition: background-color 0.3s;
+    margin-right: 5px;
+    width: 200px;
+    height: 50px;
+    font-weight: bolder;
+    font-size: 20px;
+    border: 2px solid yellowgreen;
+}
+
+.maven-tablink:hover {
+    background-color: #dc7e12;
+}
+
+.maven-tabcontent {
+    display: none;
+    padding: 20px;
+    border: 1px solid #ccc;
+    margin-top: 10px;
+}
+
+.maven-tabcontent h3 {
+    margin-top: 0;
+    color: yellow;
+}
+
+.maven-tabcontent ul li {
+    color: goldenrod;
+    margin-left: 20px;
+    padding-left: 20px;
+}
+
+.maven-tabcontent ol li {
+    color: goldenrod;
+}
+
+.maven-tabcontent a {
+    color: rgb(238, 211, 142);
+    text-decoration: none;
+}
+
+.maven-active-tab {
+    background-color: #dac910;
+    color: black;
+}
+
+/*  maven market project ends  */

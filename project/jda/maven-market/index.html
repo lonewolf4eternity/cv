@@ -61,7 +61,39 @@
                     <h2>Maven Market Project</h2>
                     <p>Mengumpulkan, Mengolah, dan memanipulasi data dalam jumlah besar untuk mendapatkan insight dari sebuah database.</p>
                 </div>
-                <img src="../../../image/maintenance/maintenance.jpg" alt="maintenance" class="project-maintenance">
+                <img src="../../../image/maintenance/maintenance.jpg" alt="maintenance" class="project-maintenance" hidden>
+                <div class="maven-tabs">
+                    <button class="maven-tablink" onclick="openMavenTab(event, 'MavenDashboard')">Dashboard</button>
+                    <button class="maven-tablink" onclick="openMavenTab(event, 'MavenDataset')">Dataset</button>
+                    <button class="maven-tablink" onclick="openMavenTab(event, 'MavenDetails')">Details</button>
+                </div>
+                <div id="MavenDashboard" class="maven-tabcontent">
+                    <h3 hidden>Dashboard</h3>
+                    <p hidden>Visualisasi data akan ditampilkan di sini.</p>
+                    <iframe title="MavenMarket_Report" style="margin-top: 5px; width: 100%; height: 1150px;" src="https://app.powerbi.com/view?r=eyJrIjoiMjA2ODVhNzUtYTEyNS00NDdiLTkwMzUtZmVlNTlkYjUyOGYxIiwidCI6ImRmODY3OWNkLWE4MGUtNDVkOC05OWFjLWM4M2VkN2ZmOTVhMCJ9" frameborder="0" allowFullScreen="true"></iframe>
+                    <!-- Tambahkan elemen canvas atau div untuk chart.js atau visualisasi lainnya -->
+                    <canvas id="maven-dashboardChart" hidden>
+                        <iframe title="MavenMarket_Report" style="margin-top: 5px; width: 100%; height: 1150px;" src="https://app.powerbi.com/view?r=eyJrIjoiMjA2ODVhNzUtYTEyNS00NDdiLTkwMzUtZmVlNTlkYjUyOGYxIiwidCI6ImRmODY3OWNkLWE4MGUtNDVkOC05OWFjLWM4M2VkN2ZmOTVhMCJ9" frameborder="0" allowFullScreen="true"></iframe>
+                    </canvas>
+                </div>            
+                <div id="MavenDataset" class="maven-tabcontent">
+                    <h3>Dataset</h3>
+                    <p>Berikut adalah daftar file dataset dengan ekstensi .csv:</p>
+                    <ul>
+                        <li><a href="../../../dataset/data1.csv" download>data1.csv</a></li>
+                        <li><a href="../../../dataset/data2.csv" download>data2.csv</a></li>
+                        <li><a href="../../../dataset/data3.csv" download>data3.csv</a></li>
+                    </ul>
+                </div>
+                <div id="MavenDetails" class="maven-tabcontent">
+                    <h3>Details</h3>
+                    <p>Informasi atau deskripsi tentang dataset:</p>
+                    <ul>
+                        <li>Dataset 1: Berisi informasi penjualan dari tahun 2020 hingga 2023.</li>
+                        <li>Dataset 2: Berisi data pelanggan termasuk demografi dan preferensi belanja.</li>
+                        <li>Dataset 3: Dataset yang memuat data inventaris produk per bulan.</li>
+                    </ul>
+                </div>
             </div>
             <footer>
                 <div class="skill-footer">

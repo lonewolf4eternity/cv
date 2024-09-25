@@ -248,3 +248,31 @@ document.getElementById('searchInput').addEventListener('input', function() {
         document.querySelector('.clear-icon').style.display = 'none'; // Sembunyikan ikon xmark
     }
 });
+
+//  maven market project
+function openMavenTab(evt, tabName) {
+    var i, mavenTabContent, mavenTabLink;
+
+    // Sembunyikan semua maven tab
+    mavenTabContent = document.getElementsByClassName("maven-tabcontent");
+    for (i = 0; i < mavenTabContent.length; i++) {
+        mavenTabContent[i].style.display = "none";
+    }
+
+    // Hapus kelas aktif dari semua maven tablink
+    mavenTabLink = document.getElementsByClassName("maven-tablink");
+    for (i = 0; i < mavenTabLink.length; i++) {
+        mavenTabLink[i].classList.remove("maven-active-tab");
+    }
+
+    // Tampilkan tab yang diinginkan
+    document.getElementById(tabName).style.display = "block";
+
+    // Tambahkan kelas aktif pada tombol maven tablink yang dipilih
+    evt.currentTarget.classList.add("maven-active-tab");
+}
+
+// Secara default, buka tab pertama (MavenDashboard)
+document.addEventListener("DOMContentLoaded", function() {
+    document.getElementsByClassName("maven-tablink")[0].click();
+});
