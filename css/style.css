@@ -1410,7 +1410,7 @@ tbody tr:hover {
 }
 
 .maven-tablink:hover {
-    background-color: #dc7e12;
+    background-color: #063e24;
 }
 
 .maven-tabcontent {
@@ -1418,11 +1418,22 @@ tbody tr:hover {
     padding: 20px;
     border: 1px solid #ccc;
     margin-top: 10px;
+    width: 95%;
 }
 
 .maven-tabcontent h3 {
     margin-top: 0;
     color: yellow;
+}
+
+.maven-tabcontent h4 {
+    color: yellowgreen;
+    margin-top: 15px;
+}
+
+.maven-tabcontent p{
+    text-align: justify;
+    margin-top: 20px;
 }
 
 .maven-tabcontent ul li {
@@ -1445,4 +1456,108 @@ tbody tr:hover {
     color: black;
 }
 
+/*  convert csv to tabel    */
+.table-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.table-content > div {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: transparent;
+    flex: 1 1 100%;
+    min-width: 100px;
+}
+
+.table-content p {
+    padding: 10px; /* Tambahkan padding untuk teks */
+    font-weight: bold; /* Buat teks menjadi tebal */
+    text-align: center; /* Rata tengah untuk judul */
+    background-color: #342222; /* Warna latar belakang untuk header */
+}
+
+.table-content iframe {
+    border: none; /* Hilangkan border iframe */
+    border-top: 1px solid #ccc; /* Tambahkan border atas untuk pemisah */
+}
+
+.table-content iframe:hover {
+    transform: scale(1.01); /* Efek hover untuk iframe */
+    transition: transform 0.2s; /* Transisi halus */
+}
+
+.maven-calendar {
+    flex: 0 0 130px;
+    width: 130px;
+    height: 500px;
+}
+
+.maven-customer {
+    flex: 1 1 auto;
+    height: 500px;
+}
+
+.maven-product {
+    flex: 1 1 100%;
+    height: 500px;
+}
+
+.maven-region {
+    flex: 1 1 400px;
+    height: 500px;
+}
+
+.return-1997-1998 {
+    flex: 1 1 600px;
+    height: 500px;
+}
+
+.trans-1997 {
+    flex: 1 1 100%;
+    height: 500px;
+}
+
+.trans-1998 {
+    flex: 1 1 100%;
+    height: 500px;
+}
+
+.maven-store {
+    flex: 1 1 100%;
+    height: 500px;
+}
+
+.dax-function {
+    display: flex;
+    flex-wrap: wrap;
+    flex-flow: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.dax-function > div {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: transparent;
+    flex: 1 1 auto;
+    min-width: 100px;
+}
+
+.dax-function p {
+    padding-left: 10px;
+    padding-bottom: 20px;
+}
+
+.dax-function-content {
+    flex: 1 1 100%;
+    height: 100%;
+    padding: 10px;
+    border-radius: 10px;
+}
 /*  maven market project ends  */
+

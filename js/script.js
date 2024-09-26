@@ -251,28 +251,24 @@ document.getElementById('searchInput').addEventListener('input', function() {
 
 //  maven market project
 function openMavenTab(evt, tabName) {
-    var i, mavenTabContent, mavenTabLink;
-
-    // Sembunyikan semua maven tab
-    mavenTabContent = document.getElementsByClassName("maven-tabcontent");
-    for (i = 0; i < mavenTabContent.length; i++) {
-        mavenTabContent[i].style.display = "none";
+    // Hapus display semua tab content
+    const tabContent = document.getElementsByClassName("maven-tabcontent");
+    for (let i = 0; i < tabContent.length; i++) {
+        tabContent[i].style.display = "none";
     }
 
-    // Hapus kelas aktif dari semua maven tablink
-    mavenTabLink = document.getElementsByClassName("maven-tablink");
-    for (i = 0; i < mavenTabLink.length; i++) {
-        mavenTabLink[i].classList.remove("maven-active-tab");
+    // Hapus kelas 'maven-active-tab' dari semua tombol tab
+    const tabLinks = document.getElementsByClassName("maven-tablink");
+    for (let i = 0; i < tabLinks.length; i++) {
+        tabLinks[i].classList.remove("maven-active-tab");
     }
 
-    // Tampilkan tab yang diinginkan
+    // Tampilkan tab yang dipilih dan tambahkan kelas 'maven-active-tab'
     document.getElementById(tabName).style.display = "block";
-
-    // Tambahkan kelas aktif pada tombol maven tablink yang dipilih
     evt.currentTarget.classList.add("maven-active-tab");
 }
 
-// Secara default, buka tab pertama (MavenDashboard)
+// Buka tab pertama sebagai default saat halaman dimuat
 document.addEventListener("DOMContentLoaded", function() {
-    document.getElementsByClassName("maven-tablink")[0].click();
+    document.querySelector(".maven-tablink").click();
 });

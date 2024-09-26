@@ -6,6 +6,7 @@
     <title>Revardy D. Chester | My Resume - My Project of Junior Data Analyst / Maven Market Project</title>
     <link rel="stylesheet" href="../../../css/style.css" type="text/css">
     <script src="https://kit.fontawesome.com/abadbabf6f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/default.min.css">
 </head>
 <body>
     <header>
@@ -72,27 +73,450 @@
                     <p hidden>Visualisasi data akan ditampilkan di sini.</p>
                     <iframe title="MavenMarket_Report" style="margin-top: 5px; width: 100%; height: 1150px;" src="https://app.powerbi.com/view?r=eyJrIjoiMjA2ODVhNzUtYTEyNS00NDdiLTkwMzUtZmVlNTlkYjUyOGYxIiwidCI6ImRmODY3OWNkLWE4MGUtNDVkOC05OWFjLWM4M2VkN2ZmOTVhMCJ9" frameborder="0" allowFullScreen="true"></iframe>
                     <!-- Tambahkan elemen canvas atau div untuk chart.js atau visualisasi lainnya -->
-                    <canvas id="maven-dashboardChart" hidden>
-                        <iframe title="MavenMarket_Report" style="margin-top: 5px; width: 100%; height: 1150px;" src="https://app.powerbi.com/view?r=eyJrIjoiMjA2ODVhNzUtYTEyNS00NDdiLTkwMzUtZmVlNTlkYjUyOGYxIiwidCI6ImRmODY3OWNkLWE4MGUtNDVkOC05OWFjLWM4M2VkN2ZmOTVhMCJ9" frameborder="0" allowFullScreen="true"></iframe>
-                    </canvas>
-                </div>            
+                </div>
                 <div id="MavenDataset" class="maven-tabcontent">
-                    <h3>Dataset</h3>
-                    <p>Berikut adalah daftar file dataset dengan ekstensi .csv:</p>
-                    <ul>
-                        <li><a href="../../../dataset/data1.csv" download>data1.csv</a></li>
-                        <li><a href="../../../dataset/data2.csv" download>data2.csv</a></li>
-                        <li><a href="../../../dataset/data3.csv" download>data3.csv</a></li>
-                    </ul>
+                    <h3>Dataset of this Project</h3>
+                    <div class="table-content">
+                        <iframe class="maven-calendar" src="https://docs.google.com/spreadsheets/d/144bSEPyVeFSQ_whLY84xDyHy_PS-utPgmlhhQCkU5i8/pubhtml?gid=136594681&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+                        <iframe class="maven-customer" src="https://docs.google.com/spreadsheets/d/1ryekrp3AVyVNxxawyA3b6MZW3-FRqty5gXztTQYp8qs/pubhtml?gid=1832918213&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+                        <iframe class="maven-product" src="https://docs.google.com/spreadsheets/d/1sWVSumHYKW_oboXWh-C2w_3cQjNPZHOeMC7SsTLxqNI/pubhtml?gid=1305002879&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+                        <iframe class="maven-region" src="https://docs.google.com/spreadsheets/d/1TFbKMdDecC7lj3y7MARli7m91av6dAFGM0cpQ1RUsL4/pubhtml?gid=955419918&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+                        <iframe class="return-1997-1998" src="https://docs.google.com/spreadsheets/d/1tnrR1nafSHbsXGbv5Vyh2xrilWhPOVhin5qyjJe46Lc/pubhtml?gid=862079893&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+                        <iframe class="trans-1997" src="https://docs.google.com/spreadsheets/d/1lqMeuQG9_XuQGnytXta2JmYezPNegoeXBoCo38i7Jvg/pubhtml?gid=1376568637&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+                        <iframe class="trans-1998" src="https://docs.google.com/spreadsheets/d/1ggPcL6KdXPvR2UJLPcyKhH3Txu9Dzfq94Ujg4ePzJ9k/pubhtml?gid=1264106641&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+                        <iframe class="maven-store" src="https://docs.google.com/spreadsheets/d/1fCPVHR-8Gj-PRZRDKh9ZM-bu5M47agdiE6ppx19iHak/pubhtml?gid=1752699262&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+                    </div>
                 </div>
                 <div id="MavenDetails" class="maven-tabcontent">
-                    <h3>Details</h3>
-                    <p>Informasi atau deskripsi tentang dataset:</p>
-                    <ul>
-                        <li>Dataset 1: Berisi informasi penjualan dari tahun 2020 hingga 2023.</li>
-                        <li>Dataset 2: Berisi data pelanggan termasuk demografi dan preferensi belanja.</li>
-                        <li>Dataset 3: Dataset yang memuat data inventaris produk per bulan.</li>
-                    </ul>
+                    <h3>About this Project</h3>
+                    <h4>Maven Market Project</h4>
+                    <p>Untuk proyek ini, saya menggunakan Power BI untuk mengimpor dataset yang berekstensi .csv, melakukan cleaning/pembersihan, menganalisa dan memvisualisasikan dataset dari Maven Analytic bernama Maven Market. Maven Market adalah bisnis yang memiliki berbagai toko kelontong dengan berbagai ukuran di berbagai negara termasuk Amerika Serikat, Kanada dan Meksiko.</p>
+                    <p>Dalam analisis dasbor ini saya akan mengulas wawasan yang saya dapatkan dari pembuatan dan laporan, beberapa proses berpikir yang berbeda yang saya gunakan untuk mencapai kesimpulan tersebut serta menawarkan beberapa solusi potensial. Proyek ini merupakan proyek bonus dari Kursus Power BI Desktop Untuk Business Intelligence dari Maven Analytics dan dapat ditemukan di Udemy.</p>
+                    <h4>Dataset</h4>
+                    <p>Seperti yang dinyatakan sebelumnya, Maven Market adalah bisnis yang memiliki toko kelontong di beberapa negara yang berbeda dan dengan berbagai ukuran dan profitabilitas.</p>
+                    <p>Data mentah berasal dari file CSV yang kemudian dibawa ke Power BI menggunakan Get Data. Data tersebut kemudian ditransformasikan dan dibersihkan menjadi set yang lebih mudah digunakan dan kemudian ditutup dan diterapkan. Proses ini diulangi untuk setiap tabel / file CSV sampai semua 8 tabel telah dibawa dan ditransformasikan.</p>
+                    <p>Proses pembersihan untuk set data ini cukup mudah, terutama membutuhkan promosi header, koreksi tipe data, dan pembuatan kolom tambahan yang akan membuat pekerjaan dengan set data lebih mudah di kemudian hari. Selain itu, set data mentah menyediakan 2 tabel untuk transaksi, satu tabel untuk setiap tahun (1997 dan 1998). Karena kedua tabel ini memiliki struktur tabel dan kolom yang sama, maka kedua tabel tersebut digabungkan ke dalam satu tabel berjudul "Data Transaksi" yang berisi kedua tahun tersebut. Saya kemudian melakukan verifikasi data dan memastikan tabel baru tersebut memiliki jumlah baris dan kolom yang benar.</p>
+                    <h4>Data Model</h4>
+                    <p>Dengan semua tabel yang telah di impor, saya melakukan koneksi antar tabel dengan menghubungkan primary-key yang saya temukan pada tabel-tabel tersebut. Berikut daftar primary-key yang saya temukan :</p>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Dari Tabel</th>
+                                <th>Key</th>
+                                <th>Ke Tabel</th>
+                                <th>Key</th>
+                                <th>Active</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="text-align: center;">
+                                <td>Returns_1997-1998</td>
+                                <td>product_id</td>
+                                <td>Products</td>
+                                <td>product_id</td>
+                                <td><input type="checkbox" checked disabled></td>
+                            </tr>
+                            <tr style="text-align: center;">
+                                <td>Returns_1997-1998</td>
+                                <td>return_date</td>
+                                <td>Calendar</td>
+                                <td>date</td>
+                                <td><input type="checkbox" checked disabled></td>
+                            </tr>
+                            <tr style="text-align: center;">
+                                <td>Returns_1997-1998</td>
+                                <td>store_id</td>
+                                <td>Stores</td>
+                                <td>store_id</td>
+                                <td><input type="checkbox" checked disabled></td>
+                            </tr>
+                            <tr style="text-align: center;">
+                                <td>Stores</td>
+                                <td>region_id</td>
+                                <td>Region</td>
+                                <td>region_id</td>
+                                <td><input type="checkbox" checked disabled></td>
+                            </tr>
+                            <tr style="text-align: center;">
+                                <td>Transaction Data</td>
+                                <td>customer_id</td>
+                                <td>Customers</td>
+                                <td>customer_id</td>
+                                <td><input type="checkbox" checked disabled></td>
+                            </tr>
+                            <tr style="text-align: center;">
+                                <td>Transaction Data</td>
+                                <td>product_id</td>
+                                <td>Products</td>
+                                <td>product_id</td>
+                                <td><input type="checkbox" checked disabled></td>
+                            </tr>
+                            <tr style="text-align: center;">
+                                <td>Transaction Data</td>
+                                <td>stock_date</td>
+                                <td>Calendar</td>
+                                <td>date</td>
+                                <td><input type="checkbox" disabled></td>
+                            </tr>
+                            <tr style="text-align: center;">
+                                <td>Transaction Data</td>
+                                <td>store_id</td>
+                                <td>Stores</td>
+                                <td>store_id</td>
+                                <td><input type="checkbox" checked disabled></td>
+                            </tr>
+                            <tr style="text-align: center;">
+                                <td>Transaction Data</td>
+                                <td>transaction_date</td>
+                                <td>Calendar</td>
+                                <td>date</td>
+                                <td><input type="checkbox" checked disabled></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p>
+                        <input type="checkbox" checked disabled> Koneksi antar tabel aktif.
+                        <br>
+                        <input type="checkbox" disabled> Koneksi antar tabel tidak aktif.
+                        <br>
+                        Transaction Data adalah gabungan antara tabel MavenMarket_Transactions_1997 dan MavenMarket_Transactions_1998.
+                    </p>
+                    <h4>DAX Functions</h4>
+                    <p>Setelah melakukan koneksi antar tabel, saya melakukan beberapa perhitungan menggunakan DAX Function dimana perhitungan tersebut menghitung beberapa KPI yang saya butuhkan untuk visualisasi data, seperti :</p>
+                    <div class="dax-function">
+                        <div class="dax-function-content">
+                            <p>% Weekend Transaction</p>
+                            <pre><code>
+% Weekend Transaction =
+DIVIDE (
+    [Weekend Transaction] ,
+    [Total Transaction] ,
+    0
+)
+                            </code></pre>
+                        </div>
+                        <div class="dax-function-content">
+                            <p>60-Day Revenue</p>
+                            <pre><code>
+60-Day Revenue = 
+CALCULATE (
+    [Total Revenue] ,
+    FILTER (
+        ALL ('Calendar'),
+        'Calendar'[date] >= MAX ('Calendar'[date]) - 59 &&
+        'Calendar'[date] <= MAX ('Calendar'[date])
+    )
+)
+                            </code></pre>
+                        </div>
+                        <div class="dax-function-content">
+                            <p>All Returns</p>
+                            <pre><code>
+All Returns =
+CALCULATE (
+    COUNT (
+        'Returns_1997-1998'[quantity]
+    ), ALL (
+        'Returns_1997-1998'
+    )
+)
+                            </code></pre>
+                        </div>
+                        <div class="dax-function-content">
+                            <p>All Transaction</p>
+                            <pre><code>
+All Transaction = 
+CALCULATE (
+    COUNT ('Transaction Data'[quantity]),
+    ALL ('Transaction Data')
+)
+                            </code></pre>
+                        </div>
+                        <div class="dax-function-content">
+                            <p>Current Age</p>
+                            <pre><code>
+Current Age =
+YEARFRAC (
+    'Customers'[Birthday], TODAY (), 1
+)
+                            </code></pre>
+                        </div>
+                        <div class="dax-function-content">
+                            <p>End of Month</p>
+                            <pre><code class="sql">
+End of Month =
+EOMONTH('Calendar'[date] , 0)
+                            </code></pre>
+                        </div>
+                        <div class="dax-function-content">
+                            <p>House Number</p>
+                            <pre><code>
+House Number =
+IF (
+    ISBLANK (
+        'Customers' [customer_address]
+    ) BLANK (),
+    LEFT (
+        'Customers' [customer_address],
+        SEARCH (
+            " ",
+            'Customers' [customer_address]
+        ) - 1
+    )
+)
+                            </code></pre>
+                        </div>
+                        <div class="dax-function-content">
+                            <p>Last Month Profit</p>
+                            <pre><code>
+Last Month Profit = 
+CALCULATE (
+    [Total Profit] ,
+    FILTER (
+        ALL ('Calendar')
+        YEAR ('Calendar'[Date]) = YEAR (MAX ('Calesndar'[Date]) - 1) &&
+        MONTH ('Calendar'[Date]) = MONTH (MAX ('Calesndar'[Date]) - 1)
+    )
+)
+                            </code></pre>
+                        </div>
+                        <div class="dax-function-content">
+                            <p>Last Month Return</p>
+                            <pre><code>
+Last Month Return =
+CALCULATE (
+    [All Returns],
+    FILTER (
+        ALL ('Calendar'),
+        YEAR (Calendar[Date]) = YEAR (MAX (Calendar[Date]) - 1) &&
+        MONTH (Calendar[Date]) = MONTH ( MAX (Calendar[Date]) - 1)
+    )
+)
+                            </code></pre>
+                        </div>
+                        <div class="dax-function-content">
+                            <p>Last Month Revenue</p>
+                            <pre><code>
+Last Month Revenue = 
+CALCULATE (
+    [Total Revenue], DATEADD (
+        'Calendar'[date] ,
+        - 1 ,
+        MONTH
+    )
+)
+                            </code></pre>
+                        </div>
+                        <div class="dax-function-content">
+                            <p>Last Month Transaction</p>
+                            <pre><code>
+Last Month Transaction = 
+CALCULATE (
+    [All Transaction] ,
+    FILTER (
+        ALL ('Calendar')
+        YEAR ('Calendar'[Date]) = YEAR (MAX ('Calesndar'[Date]) - 1) &&
+        MONTH ('Calendar'[Date]) = MONTH (MAX ('Calesndar'[Date]) - 1)
+    )
+)
+                            </code></pre>
+                        </div>
+                        <div class="dax-function-content">
+                            <p>Price_Tier</p>
+                            <pre><code>
+Price_Tier =
+IF (
+    'Products'[product_retail_price] > 3,
+    "High",
+    IF (
+        'Products'[product_retail_price] > 1,
+        "Mid",
+        "Low"
+    )
+)
+                            </code></pre>
+                        </div>
+                        <div class="dax-function-content">
+                            <p>Priority</p>
+                            <pre><code>
+Priority =
+IF (
+    AND (
+        'Customers'[homeowner] = "Y" ,
+        'Customers'[member_card] = "Golden"
+    ), "High", "Standard"
+)
+                            </code></pre>
+                        </div>
+                        <div class="dax-function-content">
+                            <p>Profit Margin</p>
+                            <pre><code>
+Profit Margin = 
+DIVIDE (
+    [Total Provit] ,
+    [Total Revenue] ,
+    0
+)
+                            </code></pre>
+                        </div>
+                        <div class="dax-function-content">
+                            <p>Quantity Returned</p>
+                            <pre><code>
+Quantity Returned =
+SUM (
+    'Returns_1997-1998'[quantity]
+)
+                            </code></pre>
+                        </div>
+                        <div class="dax-function-content">
+                            <p>Quantity Sold</p>
+                            <pre><code>
+Quantity Sold = 
+SUM (
+    'Transaction Data'[quantity]
+)
+                            </code></pre>
+                        </div>
+                        <div class="dax-function-content">
+                            <p>Return Rate</p>
+                            <pre><code>
+Return Rate =
+DIVIDE (
+    'Returns_1997-1998'[Quantity Returned],
+    'Transaction Data'[Quantity Sold],
+    0
+)
+                            </code></pre>
+                        </div>
+                        <div class="dax-function-content">
+                            <p>Revenue Target</p>
+                            <pre><code>
+Revenue Target = 
+[Last Month Revenue] * 1.05
+                            </code></pre>
+                        </div>
+                        <div class="dax-function-content">
+                            <p>Short_Country</p>
+                            <pre><code>
+Short_Country =
+UPPER (
+    LEFT (
+        'Customers'[customer_country], 3
+    )
+)
+                            </code></pre>
+                        </div>
+                        <div class="dax-function-content">
+                            <p>Total Cost</p>
+                            <pre><code>
+Total Cost = 
+SUM (
+    Products
+    Products[product_cost] * [Quantity Sold]
+)
+                            </code></pre>
+                        </div>
+                        <div class="dax-function-content">
+                            <p>Total Profit</p>
+                            <pre><code>
+Total Profit = 
+[Total Revenue] - [Total Cost]
+                            </code></pre>
+                        </div>
+                        <div class="dax-function-content">
+                            <p>Total Returns</p>
+                            <pre><code>
+Total Returns =
+COUNT (
+    'Returns_1997-1998'[product_id]
+)
+                            </code></pre>
+                        </div>
+                        <div class="dax-function-content">
+                            <p>Total Revenue</p>
+                            <pre><code>
+Total Revenue = 
+SUMX (
+    Products,
+    Products[product_retail_price] * [Quantity Sold]
+)
+                            </code></pre>
+                        </div>
+                        <div class="dax-function-content">
+                            <p>Total Transactions</p>
+                            <pre><code>
+Total Transactions =
+COUNT (
+    'Transaction Data'[product_id]
+)
+                            </code></pre>
+                        </div>
+                        <div class="dax-function-content">
+                            <p>Unique Product</p>
+                            <pre><code>
+Unique Product =
+DISTINTCOUNT (
+    'Products'[product_name]
+)
+                            </code></pre>
+                        </div>
+                        <div class="dax-function-content">
+                            <p>Weekend</p>
+                            <pre><code>
+Weekend = 
+IF (
+    OR (
+        'Calendar' [Day Name] = "Saturday",
+        'Calendar' [Day Name] = "Sunday"
+    ), "Y", "N"
+)
+                            </code></pre>
+                        </div>
+                        <div class="dax-function-content">
+                            <p>Weekend Transaction</p>
+                            <pre><code>
+Weekend Transaction =
+CALCULATE (
+    [Total Transaction] ,
+    'Calendar'[Weekend] = "Y"
+)
+                            </code></pre>
+                        </div>
+                        <div class="dax-function-content">
+                            <p>Year_Since_Remodel</p>
+                            <pre><code>
+Year_Since_Remodel =
+IF (
+    NOT (
+        ISBLANK (
+            Stores[last_remodel_date]
+        )
+    ), YEARFRAC (
+        Stores[last_remodel_date],
+        TODAY ()
+    )
+)
+                            </code></pre>
+                        </div>
+                        <div class="dax-function-content">
+                            <p>YTD Revenue</p>
+                            <pre><code>
+YTD Revenue =
+CALCULATE (
+    [Total Revenue] ,
+    FILTER (
+        ALL ('Calendar'), 'Calendar'[date] <= MAX ('Calendar'[date]) &&
+        YEAR (MAX ('Calendar'[date]))
+    )
+)
+                            </code></pre>
+                        </div>
+                    </div>
+                    <h4>Membuat Visual (Dashboard)</h4>
+                    <p>Untuk dashboard, saya menggunakan KPI Card untuk menampilkan Transaksi, Profit, Return, dan Revenue bulan terakhir.</p>
+                    <p>Kemudian saya menggunakan Matrix untuk menampilkan nilai total transaksi, profit, profit margin dan return rate dari masing-masing brand produk yang telah di filter sebanyak 30 brand teratas.</p>
+                    <p>Selanjutnya saya menambahkan MAP untuk menampilkan kota, negara bagian dan negara dimana toko Maven berada.</p>
+                    <p>Terakhir saya menambahkan Gaunge dan Column Chart untuk mengetahui perbandinga Revenue vs Target dan Trending Revenue mingguan.</p>
                 </div>
             </div>
             <footer>
@@ -112,5 +536,7 @@
         </main>
     </div>
     <script src="../../../js/script.js" type="text/javascript"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
 </body>
 </html>
