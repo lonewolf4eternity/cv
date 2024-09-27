@@ -1638,3 +1638,70 @@ tbody tr:hover {
     color: black;
     font-weight: bolder;
 }
+
+/*  NHTSA format    */
+/* NHTSA Tab Styling */
+.nhtsa-tab-container {
+    margin-top: 50px;
+    width: 95%;
+}
+
+.nhtsa-tab-menu {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background-color: transparent;
+    border-radius: 5px 5px 0 0;
+}
+
+.nhtsa-tab-item {
+    flex: 1;
+    padding: 15px;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    height: fit-content;
+}
+
+.nhtsa-tab-item-img {
+    width: 300px;
+    height: 100px;
+    background-image: url(../image/project/jda/nhtsa/nhtsa.png);
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: 300px 100px;
+}
+
+.nhtsa-tab-item:hover {
+    background-color: #555;
+    font-weight: bold;
+}
+
+.nhtsa-tab-item.active {
+    background-color: #2b527b;
+    font-weight: bolder;
+}
+
+.nhtsa-tab-content {
+    padding: 20px;
+    background-color: transparent;
+    border:2px solid #ddd;
+    border-radius: 0 0 5px 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.nhtsa-tab-panel {
+    display: none;
+    background-color: transparent;
+}
+
+.nhtsa-tab-panel h3 {
+    color: yellow;
+}
+
+.nhtsa-tab-panel.active {
+    display: block;
+}
