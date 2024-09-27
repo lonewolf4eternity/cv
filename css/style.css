@@ -1518,10 +1518,11 @@ tbody tr:hover {
     border-radius: 10px;
     overflow: hidden;
     background-color: transparent;
-    padding: 10px;
+    padding: 5px;
     display: inline-block;
     width: auto;
-    min-width: 100px;
+    min-width: 50px;
+    overflow-x: auto;
 }
 
 .dax-function p {
@@ -1700,6 +1701,31 @@ tbody tr:hover {
 
 .nhtsa-tab-panel h3 {
     color: yellow;
+    margin-bottom: 5px;
+}
+
+.nhtsa-tab-panel h4 {
+    color: yellowgreen;
+    margin-bottom: 10px;
+}
+
+.nhtsa-tab-panel p {
+    margin-bottom: 15px;
+}
+
+.nhtsa-tab-panel ol {
+    margin-bottom: 20px;
+}
+
+.nhtsa-tab-panel ol li {
+    color: gold;
+    padding-left: 20px;
+    margin-left: 20px;
+}
+
+.nhtsa-tab-panel h3, h4, p, ol, li {
+    line-height: 1.25;
+    text-align: justify;
 }
 
 .nhtsa-tab-panel.active {

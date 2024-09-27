@@ -157,24 +157,39 @@
                         <h4>Bike Sharing Project</h4>
                         <!--
                         <script src="https://gist.github.com/lonewolf4eternity/9660f13d32a7329f88270633fa4d3d35.js"></script>-->
-                        <pre><code class="language-python">
+                        <div class="dax-function">
+                            <div class="dax-function-content">
+                                <p>Import Library</p>
+                                <pre><code class="language-python">
 import streamlit as st
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
-
+                                </code></pre>
+                            </div>
+                            <div class="dax-function-content">
+                                <p>Load data</p>
+                                <pre><code class="language-python">
 # Load data
 day_df = pd.read_csv('day.csv')
 hour_df = pd.read_csv('hour.csv')
-
+                                </code></pre>
+                            </div>
+                            <div class="dax-function-content">
+                                <p>Converting datetime</p>
+                                <pre><code class="language-python">
 # Convert datetime columns to datetime type
 datetime_columns = ["dteday"]
 
 for column in datetime_columns:
     day_df[column] = pd.to_datetime(day_df[column])
     hour_df[column] = pd.to_datetime(hour_df[column])
-
+                                </code></pre>
+                            </div>
+                            <div class="dax-function-content">
+                                <p>Mapping season</p>
+                                <pre><code class="language-python">
 # Mapping season, yr (year), and mnth (month) columns
 season_mapping = {1: "spring", 2: "summer", 3: "fall", 4: "winter"}
 yr_mapping = {0: 2011, 1: 2012}
@@ -193,7 +208,11 @@ hour_df['mnth'] = hour_df['mnth'].replace(mnth_mapping)
 
 clean_day_df = day_df
 clean_hour_df = hour_df
-
+                                </code></pre>
+                            </div>
+                            <div class="dax-function-content">
+                                <p>rents by season</p>
+                                <pre><code class="language-python">
 # Calculate rents by season
 rents_by_season = clean_day_df.groupby('season')[['casual', 'registered', 'cnt']].mean().reset_index()
 rents_by_season = rents_by_season.rename(columns={'cnt': 'total_average'}).astype({
@@ -201,7 +220,11 @@ rents_by_season = rents_by_season.rename(columns={'cnt': 'total_average'}).astyp
     'registered': int,
     'total_average': int
 }).sort_values(by='total_average', ascending=False)
-
+                                </code></pre>
+                            </div>
+                            <div class="dax-function-content">
+                                <p>contribution by hour</p>
+                                <pre><code class="language-python">
 # Calculate contribution by hour
 contribution_by_hour = clean_hour_df.groupby('hr').agg(
     avg_casual=('casual', 'mean'),
@@ -212,10 +235,18 @@ contribution_by_hour = clean_hour_df.groupby('hr').agg(
     'avg_register': int,
     'total_average': int
 })
-
+                                </code></pre>
+                            </div>
+                            <div class="dax-function-content">
+                                <p>Streamlit Apps</p>
+                                <pre><code class="language-python">
 # Streamlit App
 st.title("Dashboard Sewa Sepeda")
-
+                                </code></pre>
+                            </div>
+                            <div class="dax-function-content">
+                                <p>Display rents by season chart</p>
+                                <pre><code class="language-python">
 # Display rents by season chart with different colors and values
 st.subheader("Sewa per Musim")
 fig_season = plt.figure()
@@ -224,11 +255,19 @@ bar_plot = sns.barplot(x='season', y='total_average', data=rents_by_season, pale
 for index, value in enumerate(rents_by_season['total_average']):
     bar_plot.text(index, value, str(value), ha='center', va='bottom')
 st.pyplot(fig_season)
-
+                                </code></pre>
+                            </div>
+                            <div class="dax-function-content">
+                                <p>Display rents by season table</p>
+                                <pre><code class="language-python">
 # Display rents by season table
 st.subheader("Tabel Sewa per Musim")
 st.table(rents_by_season.set_index('season'))
-
+                                </code></pre>
+                            </div>
+                            <div class="dax-function-content">
+                                <p>Display contribution by hour chart</p>
+                                <pre><code class="language-python">
 # Display contribution by hour chart with all values and increased size
 st.subheader("Kontribusi per Jam")
 fig_hour = plt.figure(figsize=(12, 6))  # Set the figsize parameter to adjust the size
@@ -238,14 +277,26 @@ sns.lineplot(x='hr', y='total_average', data=contribution_by_hour, label='Total 
 plt.xticks(contribution_by_hour['hr'])
 plt.legend()
 st.pyplot(fig_hour)
-
+                                </code></pre>
+                            </div>
+                            <div class="dax-function-content">
+                                <p>Display contribution by hour table</p>
+                                <pre><code class="language-python">
 # Display contribution by hour table
 st.subheader("Tabel Kontribusi per Jam")
 st.table(contribution_by_hour.set_index('hr'))
-
+                                </code></pre>
+                            </div>
+                            <div class="dax-function-content">
+                                <p>Display summary for rents_by_day</p>
+                                <pre><code class="language-python">
 # Display summary for rents_by_day
 st.subheader("Analisa Sewa per Musim")
-
+                                </code></pre>
+                            </div>
+                            <div class="dax-function-content">
+                                <p>Summary 01</p>
+                                <pre><code class="language-python">
 summary_text = """
 **Pertanyaan 1**
 
@@ -275,11 +326,18 @@ if view_more:
     st.write(full_summary_text)
 else:
     st.write(summary_text)
-
-
+                                </code></pre>
+                            </div>
+                            <div class="dax-function-content">
+                                <p>Display summary for contribution_by_hour</p>
+                                <pre><code class="language-python">
 # Display summary for contribution_by_hour
 st.subheader("Analisa Kontribusi per Jam")
-
+                                </code></pre>
+                            </div>
+                            <div class="dax-function-content">
+                                <p>Summary 02</p>
+                                <pre><code class="language-python">
 summary_text_2 = """
 **Pertanyaan 2**
 
@@ -309,12 +367,15 @@ if view_more_2:
     st.write(full_summary_text_2)
 else:
     st.write(summary_text_2)
-
-
-
-
+                                </code></pre>
+                            </div>
+                            <div class="dax-function-content">
+                                <p>Footer for dashboard</p>
+                                <pre><code class="language-python">
 st.caption ('Revardy D. Chester (c) 2023 | Dicoding Indonesia | Proyek Analisis Data : Bike Sharing Dataset')
-                        </code></pre>
+                                </code></pre>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
