@@ -254,39 +254,21 @@
                     <p>Setelah melakukan koneksi antar tabel, saya melakukan beberapa perhitungan menggunakan DAX Function dimana perhitungan tersebut menghitung beberapa KPI yang saya butuhkan untuk visualisasi data, seperti :</p>
                     <div class="dax-function">
                         <div class="dax-function-content">
-                            <p>% Weekend Transaction</p>
+                            <p>End of Month</p>
                             <pre><code class="language-powerquery">
-% Weekend Transaction =
-DIVIDE (
-    [Weekend Transaction] ,
-    [Total Transaction] ,
-    0
-)
+End of Month =
+EOMONTH('Calendar'[date] , 0)
                             </code></pre>
                         </div>
                         <div class="dax-function-content">
-                            <p>All Returns</p>
+                            <p>Weekend</p>
                             <pre><code class="language-powerquery">
-All Returns =
-CALCULATE (
-    COUNT (
-        'Returns_1997-1998'[quantity]
-    ), ALL (
-        'Returns_1997-1998'
-    )
-)
-                            </code></pre>
-                        </div>
-                        <div class="dax-function-content">
-                            <p>Last Month Revenue</p>
-                            <pre><code class="language-powerquery">
-Last Month Revenue = 
-CALCULATE (
-    [Total Revenue], DATEADD (
-        'Calendar'[date] ,
-        - 1 ,
-        MONTH
-    )
+Weekend = 
+IF (
+    OR (
+        'Calendar' [Day Name] = "Saturday",
+        'Calendar' [Day Name] = "Sunday"
+    ), "Y", "N"
 )
                             </code></pre>
                         </div>
@@ -296,48 +278,6 @@ CALCULATE (
 Current Age =
 YEARFRAC (
     'Customers'[Birthday], TODAY (), 1
-)
-                            </code></pre>
-                        </div>
-                        <div class="dax-function-content">
-                            <p>End of Month</p>
-                            <pre><code class="language-powerquery">
-End of Month =
-EOMONTH('Calendar'[date] , 0)
-                            </code></pre>
-                        </div>
-                        <div class="dax-function-content">
-                            <p>Profit Margin</p>
-                            <pre><code class="language-powerquery">
-Profit Margin = 
-DIVIDE (
-    [Total Provit] ,
-    [Total Revenue] ,
-    0
-)
-                            </code></pre>
-                        </div>
-                        <div class="dax-function-content">
-                            <p>All Transaction</p>
-                            <pre><code class="language-powerquery">
-All Transaction = 
-CALCULATE (
-    COUNT ('Transaction Data'[quantity]),
-    ALL ('Transaction Data')
-)
-                            </code></pre>
-                        </div>
-                        <div class="dax-function-content">
-                            <p>60-Day Revenue</p>
-                            <pre><code class="language-powerquery">
-60-Day Revenue = 
-CALCULATE (
-    [Total Revenue] ,
-    FILTER (
-        ALL ('Calendar'),
-        'Calendar'[date] >= MAX ('Calendar'[date]) - 59 &&
-        'Calendar'[date] <= MAX ('Calendar'[date])
-    )
 )
                             </code></pre>
                         </div>
@@ -360,35 +300,62 @@ IF (
                             </code></pre>
                         </div>
                         <div class="dax-function-content">
-                            <p>Total Revenue</p>
+                            <p>Priority</p>
                             <pre><code class="language-powerquery">
-Total Revenue = 
-SUMX (
-    Products,
-    Products[product_retail_price] * [Quantity Sold]
+Priority =
+IF (
+    AND (
+        'Customers'[homeowner] = "Y" ,
+        'Customers'[member_card] = "Golden"
+    ), "High", "Standard"
 )
                             </code></pre>
                         </div>
                         <div class="dax-function-content">
-                            <p>Last Month Profit</p>
+                            <p>Short_Country</p>
                             <pre><code class="language-powerquery">
-Last Month Profit = 
-CALCULATE (
-    [Total Profit] ,
-    FILTER (
-        ALL ('Calendar')
-        YEAR ('Calendar'[Date]) = YEAR (MAX ('Calesndar'[Date]) - 1) &&
-        MONTH ('Calendar'[Date]) = MONTH (MAX ('Calesndar'[Date]) - 1)
+Short_Country =
+UPPER (
+    LEFT (
+        'Customers'[customer_country], 3
     )
 )
                             </code></pre>
                         </div>
                         <div class="dax-function-content">
-                            <p>Quantity Returned</p>
+                            <p>Price_Tier</p>
                             <pre><code class="language-powerquery">
-Quantity Returned =
-SUM (
-    'Returns_1997-1998'[quantity]
+Price_Tier =
+IF (
+    'Products'[product_retail_price] > 3,
+    "High",
+    IF (
+        'Products'[product_retail_price] > 1,
+        "Mid",
+        "Low"
+    )
+)
+                            </code></pre>
+                        </div>
+                        <div class="dax-function-content">
+                            <p>Unique Product</p>
+                            <pre><code class="language-powerquery">
+Unique Product =
+DISTINTCOUNT (
+    'Products'[product_name]
+)
+                            </code></pre>
+                        </div>
+                        <div class="dax-function-content">
+                            <p>All Returns</p>
+                            <pre><code class="language-powerquery">
+All Returns =
+CALCULATE (
+    COUNT (
+        'Returns_1997-1998'[quantity]
+    ), ALL (
+        'Returns_1997-1998'
+    )
 )
                             </code></pre>
                         </div>
@@ -403,6 +370,35 @@ CALCULATE (
         YEAR (Calendar[Date]) = YEAR (MAX (Calendar[Date]) - 1) &&
         MONTH (Calendar[Date]) = MONTH ( MAX (Calendar[Date]) - 1)
     )
+)
+                            </code></pre>
+                        </div>
+                        <div class="dax-function-content">
+                            <p>Quantity Returned</p>
+                            <pre><code class="language-powerquery">
+Quantity Returned =
+SUM (
+    'Returns_1997-1998'[quantity]
+)
+                            </code></pre>
+                        </div>
+                        <div class="dax-function-content">
+                            <p>Return Rate</p>
+                            <pre><code class="language-powerquery">
+Return Rate =
+DIVIDE (
+    'Returns_1997-1998'[Quantity Returned],
+    'Transaction Data'[Quantity Sold],
+    0
+)
+                            </code></pre>
+                        </div>
+                        <div class="dax-function-content">
+                            <p>Total Returns</p>
+                            <pre><code class="language-powerquery">
+Total Returns =
+COUNT (
+    'Returns_1997-1998'[product_id]
 )
                             </code></pre>
                         </div>
@@ -423,6 +419,68 @@ IF (
                             </code></pre>
                         </div>
                         <div class="dax-function-content">
+                            <p>% Weekend Transaction</p>
+                            <pre><code class="language-powerquery">
+% Weekend Transaction =
+DIVIDE (
+    [Weekend Transaction] ,
+    [Total Transaction] ,
+    0
+)
+                            </code></pre>
+                        </div>
+                        <div class="dax-function-content">
+                            <p>60-Day Revenue</p>
+                            <pre><code class="language-powerquery">
+60-Day Revenue = 
+CALCULATE (
+    [Total Revenue] ,
+    FILTER (
+        ALL ('Calendar'),
+        'Calendar'[date] >= MAX ('Calendar'[date]) - 59 &&
+        'Calendar'[date] <= MAX ('Calendar'[date])
+    )
+)
+                            </code></pre>
+                        </div>
+                        <div class="dax-function-content">
+                            <p>All Transaction</p>
+                            <pre><code class="language-powerquery">
+All Transaction = 
+CALCULATE (
+    COUNT ('Transaction Data'[quantity]),
+    ALL ('Transaction Data')
+)
+                            </code></pre>
+                        </div>
+                        <div class="dax-function-content">
+                            <p>Last Month Profit</p>
+                            <pre><code class="language-powerquery">
+Last Month Profit = 
+CALCULATE (
+    [Total Profit] ,
+    FILTER (
+        ALL ('Calendar')
+        YEAR ('Calendar'[Date]) = YEAR (MAX ('Calesndar'[Date]) - 1) &&
+        MONTH ('Calendar'[Date]) = MONTH (MAX ('Calesndar'[Date]) - 1)
+    )
+)
+                            </code></pre>
+                        </div>
+                        <div class="dax-function-content">
+                            <p>Last Month Revenue</p>
+                            <pre><code class="language-powerquery">
+Last Month Revenue = 
+CALCULATE (
+    [Total Revenue], DATEADD (
+        'Calendar'[date] ,
+        - 1 ,
+        MONTH
+    )
+)
+                            </code></pre>
+                        </div>
+                        <div class="dax-function-content">
                             <p>Last Month Transaction</p>
                             <pre><code class="language-powerquery">
 Last Month Transaction = 
@@ -437,11 +495,22 @@ CALCULATE (
                             </code></pre>
                         </div>
                         <div class="dax-function-content">
-                            <p>Total Returns</p>
+                            <p>Profit Margin</p>
                             <pre><code class="language-powerquery">
-Total Returns =
-COUNT (
-    'Returns_1997-1998'[product_id]
+Profit Margin = 
+DIVIDE (
+    [Total Provit] ,
+    [Total Revenue] ,
+    0
+)
+                            </code></pre>
+                        </div>
+                        <div class="dax-function-content">
+                            <p>Quantity Sold</p>
+                            <pre><code class="language-powerquery">
+Quantity Sold = 
+SUM (
+    'Transaction Data'[quantity]
 )
                             </code></pre>
                         </div>
@@ -450,24 +519,6 @@ COUNT (
                             <pre><code class="language-powerquery">
 Revenue Target = 
 [Last Month Revenue] * 1.05
-                            </code></pre>
-                        </div>
-                        <div class="dax-function-content">
-                            <p>Total Transactions</p>
-                            <pre><code class="language-powerquery">
-Total Transactions =
-COUNT (
-    'Transaction Data'[product_id]
-)
-                            </code></pre>
-                        </div>
-                        <div class="dax-function-content">
-                            <p>Unique Product</p>
-                            <pre><code class="language-powerquery">
-Unique Product =
-DISTINTCOUNT (
-    'Products'[product_name]
-)
                             </code></pre>
                         </div>
                         <div class="dax-function-content">
@@ -481,37 +532,29 @@ SUM (
                             </code></pre>
                         </div>
                         <div class="dax-function-content">
-                            <p>Price_Tier</p>
-                            <pre><code class="language-powerquery">
-Price_Tier =
-IF (
-    'Products'[product_retail_price] > 3,
-    "High",
-    IF (
-        'Products'[product_retail_price] > 1,
-        "Mid",
-        "Low"
-    )
-)
-                            </code></pre>
-                        </div>
-                        <div class="dax-function-content">
-                            <p>Priority</p>
-                            <pre><code class="language-powerquery">
-Priority =
-IF (
-    AND (
-        'Customers'[homeowner] = "Y" ,
-        'Customers'[member_card] = "Golden"
-    ), "High", "Standard"
-)
-                            </code></pre>
-                        </div>
-                        <div class="dax-function-content">
                             <p>Total Profit</p>
                             <pre><code class="language-powerquery">
 Total Profit = 
 [Total Revenue] - [Total Cost]
+                            </code></pre>
+                        </div>
+                        <div class="dax-function-content">
+                            <p>Total Revenue</p>
+                            <pre><code class="language-powerquery">
+Total Revenue = 
+SUMX (
+    Products,
+    Products[product_retail_price] * [Quantity Sold]
+)
+                            </code></pre>
+                        </div>
+                        <div class="dax-function-content">
+                            <p>Total Transactions</p>
+                            <pre><code class="language-powerquery">
+Total Transactions =
+COUNT (
+    'Transaction Data'[product_id]
+)
                             </code></pre>
                         </div>
                         <div class="dax-function-content">
@@ -537,49 +580,9 @@ CALCULATE (
 )
                             </code></pre>
                         </div>
-                        <div class="dax-function-content">
-                            <p>Short_Country</p>
-                            <pre><code class="language-powerquery">
-Short_Country =
-UPPER (
-    LEFT (
-        'Customers'[customer_country], 3
-    )
-)
-                            </code></pre>
-                        </div>
-                        <div class="dax-function-content">
-                            <p>Return Rate</p>
-                            <pre><code class="language-powerquery">
-Return Rate =
-DIVIDE (
-    'Returns_1997-1998'[Quantity Returned],
-    'Transaction Data'[Quantity Sold],
-    0
-)
-                            </code></pre>
-                        </div>
-                        <div class="dax-function-content">
-                            <p>Weekend</p>
-                            <pre><code class="language-powerquery">
-Weekend = 
-IF (
-    OR (
-        'Calendar' [Day Name] = "Saturday",
-        'Calendar' [Day Name] = "Sunday"
-    ), "Y", "N"
-)
-                            </code></pre>
-                        </div>
-                        <div class="dax-function-content">
-                            <p>Quantity Sold</p>
-                            <pre><code class="language-powerquery">
-Quantity Sold = 
-SUM (
-    'Transaction Data'[quantity]
-)
-                            </code></pre>
-                        </div>
+
+
+
                     </div>
                     <h4>Membuat Visual (Dashboard)</h4>
                     <p>Untuk dashboard, saya menggunakan KPI Card untuk menampilkan Transaksi, Profit, Return, dan Revenue bulan terakhir.</p>
