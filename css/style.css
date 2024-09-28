@@ -358,8 +358,8 @@ aside nav ul li a i:hover {
 }
 
 .rs-footer {
-    width: max-content;
-    height: 150px;
+    width: 100%;
+    height: max-content;
     margin: 20px;
     padding: 20px;
 }
@@ -471,7 +471,7 @@ footer{
     text-align: center;
     padding: 20px 0;
     position: relative;
-    width: 100%;
+    width: 97%;
     margin-top: 100px;
 }
 
@@ -479,9 +479,10 @@ footer{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+    max-width: 100%;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    padding-left: 20px;
 }
 
 .skill-footer p {
@@ -1764,4 +1765,21 @@ tbody tr:hover {
 
 .nhtsa-tab-panel.active {
     display: block;
+}
+
+.powered-by {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    padding-left: 20px;
+    padding-top: 0;
+    background-color: transparent;
+    text-align: left;
+}
+
+.powered-by img {
+    height: 60px;
+    width: 110px;
+    margin: 0;
+    padding: 5px;
+    border: 1px solid yellow;
 }
