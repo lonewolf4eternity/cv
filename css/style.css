@@ -111,6 +111,114 @@ header {
     font-weight: bolder;
 }
 
+/*  ------------------------------------------------------------------------------  */
+/* Responsive Adjustments for Mobile Devices */
+@media only screen and (max-width: 768px) {
+    /* Mengatur ulang ukuran dan tata letak header */
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+        height: auto;
+    }
+
+    /* Mengubah tata letak bagian kiri header */
+    .header-left {
+        width: 100%;
+        justify-content: flex-start;
+        margin-bottom: 10px;
+    }
+
+    .logo {
+        height: 40px;
+        margin-right: 10px;
+    }
+
+    .title-section h1 {
+        font-size: 18pt;
+    }
+
+    .title-section h2 {
+        font-size: 14pt;
+    }
+
+    .title-section h3 {
+        font-size: 12pt;
+    }
+
+    /* Mengubah tata letak bagian tengah header */
+    .header-center {
+        width: 100%;
+        text-align: left;
+        margin-bottom: 10px;
+    }
+
+    .date-section {
+        font-size: 14pt;
+    }
+
+    #date {
+        font-size: 18px;
+    }
+
+    #time {
+        font-size: 14pt;
+    }
+
+    /* Menyesuaikan bagian kanan header (menu navigasi) */
+    .header-right {
+        width: 100%;
+    }
+
+    .header-right nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .header-right nav ul li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .header-right nav ul li a {
+        font-size: 14pt;
+        padding: 8px;
+    }
+}
+
+/* Untuk layar yang lebih kecil, seperti smartphone (max-width: 480px) */
+@media only screen and (max-width: 480px) {
+    .title-section h1 {
+        font-size: 16pt;
+    }
+
+    .title-section h2 {
+        font-size: 12pt;
+    }
+
+    .title-section h3 {
+        font-size: 10pt;
+    }
+
+    .date-section {
+        font-size: 12pt;
+    }
+
+    #date {
+        font-size: 16px;
+    }
+
+    #time {
+        font-size: 12pt;
+    }
+
+    .header-right nav ul li a {
+        font-size: 12pt;
+    }
+}
+
+/*  ------------------------------------------------------------------------------  */
+
 .container {
     display: flex;
     height: calc(100vh - 100px);
@@ -264,6 +372,107 @@ main {
     overflow-x: hidden;
 }
 
+/*  ------------------------------------------------------------------------------  */
+/* Responsive Adjustments for Mobile Devices */
+@media only screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .sidebar-left,
+    .sidebar-right {
+        width: 100%;
+        padding: 1rem;
+        box-shadow: none;
+        font-size: 14pt; /* Ukuran font lebih kecil untuk layar kecil */
+    }
+
+    .sidebar-left img {
+        width: 30px;
+        height: auto;
+    }
+
+    main {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    /* Adjusting the grid layout for .main-profile */
+    .main-profile {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-gap: 10px;
+    }
+
+    .profile-title,
+    .profile-aboutme,
+    .profile-contact,
+    .profile-social-media {
+        grid-column: 1 / -1;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .profile-aboutme,
+    .profile-contact,
+    .profile-social-media h2 {
+        padding-top: 15px;
+        font-size: larger;
+    }
+
+    .profile-social-media i {
+        font-size: 18pt;
+        padding: 8px;
+    }
+
+    /* Tooltip Container Adjustments */
+    .tooltip-container {
+        width: auto; /* Lebar otomatis sesuai layar */
+        left: 5px; /* Menyesuaikan posisi pada layar kecil */
+        bottom: 5px;
+        padding: 15px;
+    }
+
+    .tooltip-container .tooltip-title {
+        font-size: 1rem;
+    }
+
+    .tooltip-container .tooltip-description {
+        font-size: 0.8rem;
+    }
+}
+
+/* For smaller smartphones (max-width: 480px) */
+@media only screen and (max-width: 480px) {
+    .sidebar-left,
+    .sidebar-right {
+        font-size: 12pt;
+    }
+
+    .sidebar-left img {
+        width: 20px;
+    }
+
+    .profile-title,
+    .profile-aboutme,
+    .profile-contact,
+    .profile-social-media {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .profile-social-media i {
+        font-size: 16pt;
+    }
+
+    .tooltip-container {
+        width: 90%;
+        padding: 10px;
+    }
+}
+/*  ------------------------------------------------------------------------------  */
+
 .profile-pic {
     text-align: center;
     margin-bottom: 20px;
@@ -326,6 +535,71 @@ aside nav ul li a i:hover {
     transform: scale(1.5);
 }
 
+/*  ------------------------------------------------------------------------------  */
+/* Responsive Adjustments for Mobile Devices */
+@media only screen and (max-width: 768px) {
+    .profile-pic img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .info-box {
+        padding: 8px;
+        margin-bottom: 10px;
+    }
+
+    .info-box h3 {
+        font-size: larger;
+    }
+
+    .info-box ul, .info-box ol {
+        padding: 8px;
+        margin: 8px;
+    }
+
+    aside nav ul li a {
+        padding: 8px;
+        font-size: 14pt;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .profile-pic img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .info-box {
+        padding: 5px;
+        margin-bottom: 8px;
+    }
+
+    .info-box h3 {
+        font-size: medium;
+    }
+
+    .info-box ul, .info-box ol {
+        padding: 5px;
+        margin: 5px;
+    }
+
+    aside nav ul li a {
+        padding: 5px;
+        font-size: 12pt;
+    }
+
+    aside nav ul li a:hover {
+        background-color: goldenrod;
+        color: #fff;
+    }
+
+    aside nav ul li a i:hover {
+        transform: scale(1.3); /* Kurangi sedikit efek hover di layar kecil */
+    }
+}
+
+/*  ------------------------------------------------------------------------------  */
+
 .skill-bar-container {
     width: 100%;
     background-color: rgb(106, 104, 95);
@@ -382,6 +656,66 @@ aside nav ul li a i:hover {
 .rs-footer-socmed i:hover {
     color: yellow;
 }
+
+/*  ------------------------------------------------------------------------------  */
+/* Responsive Adjustments for Mobile Devices */
+@media only screen and (max-width: 768px) {
+    .skill-bar-container {
+        margin: 8px 0;
+    }
+
+    .skill-bar {
+        height: 4px; /* Kurangi tinggi bar keterampilan */
+    }
+
+    .skill-value {
+        font-size: 11pt; /* Kurangi ukuran font untuk layar kecil */
+    }
+
+    .stars {
+        font-size: 13pt; /* Ukuran bintang lebih kecil pada layar kecil */
+    }
+
+    .rs-footer {
+        margin: 15px;
+        padding: 15px;
+    }
+
+    .rs-footer p {
+        font-size: 12pt; /* Kurangi ukuran font untuk layar kecil */
+    }
+
+    .rs-footer-socmed i {
+        font-size: 18pt; /* Ukuran ikon sosial media lebih kecil */
+        padding: 8px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .skill-bar {
+        height: 3px; /* Bar lebih tipis untuk layar yang lebih kecil */
+    }
+
+    .skill-value {
+        font-size: 10pt; /* Ukuran teks lebih kecil pada layar smartphone */
+    }
+
+    .stars {
+        font-size: 12pt; /* Ukuran bintang lebih kecil */
+        margin-left: 5px;
+    }
+
+    .rs-footer p {
+        font-size: 10pt; /* Ukuran font lebih kecil untuk footer */
+    }
+
+    .rs-footer-socmed i {
+        font-size: 16pt; /* Ukuran ikon sosial media lebih kecil */
+        padding: 5px;
+    }
+}
+
+/*  ------------------------------------------------------------------------------  */
 
 .main-skill h2 {
     color: yellow;
@@ -448,18 +782,6 @@ aside nav ul li a i:hover {
     border: 2px solid goldenrod;
 }
 
-@media (max-width: 768px) {
-    .skill-box {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 480px) {
-    .skill-box {
-        grid-template-columns: repeat(1, 1fr);
-    }
-}
-
 .skil-stars {
     text-align: justify;
     color: gold;
@@ -500,6 +822,68 @@ footer{
     color: yellow;
 }
 
+/*  ------------------------------------------------------------------------------  */
+/* Responsive Adjustments for Mobile Devices */
+@media only screen and (max-width: 768px) {
+    .skill-box {
+        grid-template-columns: repeat(2, 1fr); /* Ganti 4 kolom menjadi 2 kolom */
+        grid-gap: 10px;
+        padding: 10px;
+    }
+
+    .skill-icon {
+        width: 200px;
+        height: 250px;
+        padding: 15px;
+    }
+
+    .skill-icon img {
+        width: 120px; /* Gambar lebih kecil di layar kecil */
+    }
+
+    .skill-icon p {
+        font-size: 12pt; /* Ukuran teks lebih kecil */
+    }
+
+    .skill-footer-socmed a {
+        font-size: 18pt; /* Ukuran ikon sosial media lebih kecil */
+        margin: 0 5px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .skill-box {
+        grid-template-columns: 1fr; /* Pada layar kecil, tampilkan satu kolom saja */
+        grid-gap: 10px;
+        padding: 10px;
+    }
+
+    .skill-icon {
+        width: 180px;
+        height: 220px;
+        padding: 10px;
+    }
+
+    .skill-icon img {
+        width: 100px;
+    }
+
+    .skill-icon p {
+        font-size: 10pt;
+    }
+
+    .skill-footer-socmed a {
+        font-size: 16pt; /* Ikon lebih kecil pada perangkat dengan layar sangat kecil */
+    }
+
+    footer {
+        padding: 15px 0;
+        font-size: 10pt;
+    }
+}
+
+/*  ------------------------------------------------------------------------------  */
+
 /*
 .main-experiences {
     display: flex;
@@ -507,7 +891,7 @@ footer{
     margin: 0 auto;
     padding: 20px;
     max-width: 1200px;
-}*/
+}/*/
 
 .main-experiences h2 {
     color: yellow;
@@ -589,11 +973,60 @@ footer{
     line-height: 1.5;
 }
 
-@media (max-width: 800px) {
-    .main-experiences {
-        grid-template-columns: 1fr; /* Kolom menjadi 1 jika layar lebih kecil */
+/*  ------------------------------------------------------------------------------  */
+/* Responsive Adjustments for Mobile Devices */
+@media only screen and (max-width: 768px) {
+    .experiences-list {
+        grid-template-columns: 1fr; /* Ganti 2 kolom menjadi 1 kolom */
+        grid-gap: 15px;
+        padding: 10px;
+    }
+
+    .experiences-item {
+        width: 100%; /* Memastikan item mengambil lebar penuh di perangkat kecil */
+        padding: 15px;
+    }
+
+    .experiences-item h2 {
+        font-size: large; /* Sesuaikan ukuran font */
+    }
+
+    .experiences-item p {
+        font-size: 12pt; /* Sesuaikan ukuran teks */
+    }
+
+    .experiences-item ol li,
+    .experiences-item ul li {
+        font-size: 11pt; /* Ukuran teks dalam daftar lebih kecil */
+        margin-left: 15px;
+        padding-left: 15px;
     }
 }
+
+@media only screen and (max-width: 480px) {
+    .experiences-list {
+        grid-gap: 10px; /* Lebih sedikit jarak antara item di layar sangat kecil */
+    }
+
+    .experiences-item {
+        padding: 10px;
+    }
+
+    .experiences-item h2 {
+        font-size: medium; /* Ukuran judul lebih kecil untuk layar kecil */
+    }
+
+    .experiences-item p {
+        font-size: 10pt;
+    }
+
+    .experiences-item ol li,
+    .experiences-item ul li {
+        font-size: 10pt;
+    }
+}
+
+/*  ------------------------------------------------------------------------------  */
 
 /*  experience grid mode end */
 
@@ -703,6 +1136,80 @@ footer{
     font-size: larger;
     margin-bottom: 10px;
 }
+
+/*  ------------------------------------------------------------------------------  */
+/* Responsive Adjustments for Education Section on Mobile Devices */
+@media only screen and (max-width: 768px) {
+    .education-list {
+        grid-template-columns: 1fr; /* Mengubah layout dari dua kolom menjadi satu kolom */
+        grid-gap: 15px;
+    }
+
+    .education-item {
+        padding: 15px;
+        flex-direction: column; /* Mengubah layout item agar teks dan ikon tersusun vertikal */
+        align-items: flex-start;
+    }
+
+    .education-item h2 {
+        font-size: large; /* Ukuran judul lebih kecil */
+    }
+
+    .edu-icon {
+        width: 80px;
+        height: 80px; /* Mengurangi ukuran ikon */
+        margin-bottom: 10px; /* Jarak antara ikon dan teks pada tampilan vertikal */
+    }
+
+    .education-item p {
+        margin-left: 0; /* Menghilangkan margin kiri pada teks */
+        font-size: 12pt; /* Sesuaikan ukuran teks */
+    }
+
+    .carousel-images img {
+        height: 150px; /* Mengurangi ukuran gambar dalam carousel */
+    }
+
+    .education-details {
+        flex-direction: column; /* Mengubah kolom menjadi satu baris di perangkat kecil */
+        align-items: flex-start;
+        padding-left: 0;
+    }
+
+    .education-column {
+        width: 100%;
+        margin-bottom: 20px; /* Tambahkan margin antar kolom */
+    }
+
+    .education-column h3 {
+        font-size: medium;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .education-item {
+        padding: 10px;
+    }
+
+    .education-item h2 {
+        font-size: medium;
+    }
+
+    .edu-icon {
+        width: 70px;
+        height: 70px;
+    }
+
+    .education-item p {
+        font-size: 10pt;
+    }
+
+    .carousel-images img {
+        height: 120px;
+    }
+}
+
+/*  ------------------------------------------------------------------------------  */
 
 .main-certification h2 {
     color: yellow;
@@ -856,6 +1363,59 @@ footer{
     transform: scale(1);
 }
 
+/*  ------------------------------------------------------------------------------  */
+/* Responsive Adjustments for Certification Section */
+@media only screen and (max-width: 768px) {
+    .certification-box {
+        grid-template-columns: 1fr; /* Mengubah layout dari tiga kolom menjadi satu kolom */
+        margin-left: 0;
+    }
+
+    .certification-item img {
+        height: 200px; /* Mengurangi ukuran tinggi gambar */
+    }
+
+    .certification-info {
+        padding: 15px; /* Sesuaikan padding untuk perangkat kecil */
+    }
+
+    .certification-btn, .view-image-btn {
+        padding: 8px 15px; /* Kurangi padding pada tombol */
+        font-size: 12pt; /* Mengurangi ukuran font tombol */
+    }
+
+    .modal-content {
+        max-width: 90%;
+        max-height: 90%; /* Menyesuaikan ukuran maksimal modal pada layar kecil */
+    }
+
+    .close {
+        font-size: 30px; /* Kurangi ukuran tombol close di layar kecil */
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .certification-item img {
+        height: 150px; /* Kurangi lebih jauh ukuran tinggi gambar */
+    }
+
+    .certification-info h3 {
+        font-size: medium; /* Ukuran judul lebih kecil */
+    }
+
+    .certification-btn, .view-image-btn {
+        padding: 5px 10px;
+        font-size: 10pt; /* Ukuran tombol lebih kecil di layar kecil */
+    }
+
+    .modal-content {
+        max-width: 95%; /* Modal lebih besar di perangkat yang lebih kecil */
+        max-height: 95%;
+    }
+}
+
+/*  ------------------------------------------------------------------------------  */
+
 .main-project h2 {
     color: yellow;
     font-size: xx-large;
@@ -947,19 +1507,6 @@ footer{
     background-color: yellow;
 }
 
-/* Sesuaikan kotak untuk responsif */
-@media (max-width: 768px) {
-    .project-box {
-        grid-template-columns: repeat(2, 1fr); /* 2 kolom untuk ukuran layar lebih kecil */
-    }
-}
-
-@media (max-width: 480px) {
-    .project-box {
-        grid-template-columns: 1fr; /* 1 kolom untuk layar sangat kecil */
-    }
-}
-
 /* Styling untuk ul dan li */
 .project-item ul {
     list-style-type: disc; /* Gunakan bulatan untuk unordered list */
@@ -978,6 +1525,83 @@ footer{
     color: gold; /* Warna bullet points */
     font-size: large; /* Ukuran bullet */
 }
+
+/*  ------------------------------------------------------------------------------  */
+/* Responsive Adjustments for Project Section */
+@media only screen and (max-width: 1024px) {
+    .project-box {
+        grid-template-columns: repeat(2, 1fr); /* Mengurangi kolom menjadi 2 di layar medium */
+        padding: 15px;
+    }
+
+    .project-item {
+        width: 100%; /* Memanfaatkan seluruh lebar kolom di layar medium */
+        height: auto; /* Agar ketinggian menyesuaikan konten */
+    }
+    
+    .project-item h3 {
+        font-size: clamp(1rem, 2.5vw, 2rem); /* Font size disesuaikan untuk layar sedang */
+        height: auto;
+    }
+
+    .project-link {
+        bottom: 15px; /* Menyesuaikan padding bawah */
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .project-box {
+        grid-template-columns: 1fr; /* Menjadi satu kolom di layar kecil */
+        padding: 10px;
+    }
+
+    .project-item {
+        width: 100%;
+        height: auto; /* Ketinggian menyesuaikan konten di layar kecil */
+    }
+
+    .project-item h3 {
+        font-size: clamp(1rem, 3vw, 1.8rem); /* Font lebih kecil untuk layar kecil */
+        height: auto;
+    }
+
+    .project-link {
+        font-size: smaller; /* Ukuran font tombol lebih kecil */
+        padding: 8px 15px; /* Padding tombol dikurangi */
+    }
+
+    .project-item ul {
+        padding-left: 20px; /* Kurangi indentasi di layar kecil */
+    }
+    
+    .project-item ul li {
+        font-size: small; /* Ukuran teks list lebih kecil */
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .project-box {
+        grid-template-columns: 1fr;
+        grid-gap: 10px;
+    }
+
+    .project-item {
+        padding: 15px;
+        width: 100%;
+        height: auto;
+    }
+
+    .project-item h3 {
+        font-size: clamp(0.8rem, 4vw, 1.5rem);
+    }
+
+    .project-link {
+        font-size: 10pt;
+        padding: 6px 10px;
+    }
+}
+
+/*  ------------------------------------------------------------------------------  */
 
 .ndt-project-box {
     margin-top: 25px;
@@ -1037,19 +1661,6 @@ footer{
     color: gold;
     font-size: medium;
     margin-bottom: 15px;
-}
-
-/* Sesuaikan kotak untuk responsif */
-@media (max-width: 768px) {
-    .ndt-project-box {
-        grid-template-columns: repeat(2, 1fr); /* 2 kolom untuk ukuran layar lebih kecil */
-    }
-}
-
-@media (max-width: 480px) {
-    .ndt-project-box {
-        grid-template-columns: 1fr; /* 1 kolom untuk layar sangat kecil */
-    }
 }
 
 /* Styling untuk ul dan li */
@@ -1150,6 +1761,59 @@ footer{
     padding: 10px;
     border-radius: 20px;
 }
+
+/*  ------------------------------------------------------------------------------  */
+/* Responsif untuk smartphone */
+@media only screen and (max-width: 768px) {
+    .ndt-project-box {
+        grid-template-columns: repeat(2, 1fr); /* Menjadi 2 kolom di layar lebih kecil */
+        padding: 10px;
+    }
+
+    .ndt-project-item,
+    .ndt-project-item-gallery {
+        grid-template-columns: repeat(2, 1fr); /* Menjadi 2 kolom di layar lebih kecil */
+        padding: 10px;
+    }
+
+    .ndt-project-item img,
+    .ndt-project-item-gallery img {
+        width: 50px; /* Ukuran gambar lebih kecil di smartphone */
+        height: 50px; /* Ukuran gambar lebih kecil di smartphone */
+    }
+
+    .ndt-project-item a,
+    .ndt-project-item-gallery a {
+        padding: 15px; /* Ukuran padding lebih kecil */
+        font-size: clamp(0.8rem, 2vw, 2rem); /* Ukuran font lebih kecil di smartphone */
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .ndt-project-box {
+        grid-template-columns: 1fr; /* Menjadi 1 kolom di layar sangat kecil */
+        padding: 5px;
+    }
+
+    .ndt-project-item,
+    .ndt-project-item-gallery {
+        grid-template-columns: 1fr; /* Menjadi 1 kolom di layar sangat kecil */
+        padding: 5px;
+    }
+
+    .ndt-project-item img,
+    .ndt-project-item-gallery img {
+        width: 40px; /* Ukuran gambar lebih kecil di smartphone */
+        height: 40px; /* Ukuran gambar lebih kecil di smartphone */
+    }
+
+    .ndt-project-item a,
+    .ndt-project-item-gallery a {
+        padding: 10px; /* Ukuran padding lebih kecil */
+        font-size: clamp(0.7rem, 1.5vw, 1.5rem); /* Ukuran font lebih kecil di smartphone */
+    }
+}
+/*  ------------------------------------------------------------------------------  */
 
 .tab-container {
     width: 90%;
@@ -1332,6 +1996,40 @@ tbody tr:hover {
     display: none; /* Sembunyikan secara default, akan ditampilkan jika ada teks */
 }
 
+/*  ------------------------------------------------------------------------------  */
+/* Responsif untuk smartphone */
+@media only screen and (max-width: 768px) {
+    .tab-buttons {
+        flex-direction: column; /* Mengubah orientasi tombol menjadi kolom */
+        height: auto; /* Tinggi otomatis */
+    }
+
+    .tab-button {
+        width: 100px; /* Mengubah lebar tombol untuk layar kecil */
+        height: 100px; /* Mengubah tinggi tombol untuk layar kecil */
+        font-size: calc(0.8vw + 0.5em); /* Ukuran font lebih kecil di smartphone */
+    }
+
+    #searchInput {
+        width: 80%; /* Memperbesar lebar input pencarian */
+        font-size: 14px; /* Mengurangi ukuran font */
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .tab-button {
+        width: 80px; /* Mengurangi lebar tombol untuk layar sangat kecil */
+        height: 80px; /* Mengurangi tinggi tombol untuk layar sangat kecil */
+        font-size: calc(0.7vw + 0.5em); /* Ukuran font lebih kecil lagi di smartphone */
+    }
+
+    #searchInput {
+        width: 90%; /* Memperbesar lebar input pencarian */
+        font-size: 12px; /* Mengurangi ukuran font lebih kecil */
+    }
+}
+/*  ------------------------------------------------------------------------------  */
+
 /*  jda css */
 .project-box-jda {
     margin-top: 25px;
@@ -1398,19 +2096,6 @@ tbody tr:hover {
     background-color: yellow;
 }
 
-/* Sesuaikan kotak untuk responsif */
-@media (max-width: 768px) {
-    .project-box-jda {
-        grid-template-columns: repeat(2, 1fr); /* 2 kolom untuk ukuran layar lebih kecil */
-    }
-}
-
-@media (max-width: 480px) {
-    .project-box-jda {
-        grid-template-columns: 1fr; /* 1 kolom untuk layar sangat kecil */
-    }
-}
-
 /* Styling untuk ul dan li */
 .project-item-jda ul {
     list-style-type: disc; /* Gunakan bulatan untuk unordered list */
@@ -1431,6 +2116,33 @@ tbody tr:hover {
     color: gold; /* Warna bullet points */
     font-size: large; /* Ukuran bullet */
 }
+
+/*  ------------------------------------------------------------------------------  */
+/* Responsif untuk smartphone dan tablet */
+@media only screen and (max-width: 768px) {
+    .project-box-jda {
+        grid-template-columns: repeat(2, 1fr); /* 2 kolom di layar lebih kecil */
+    }
+
+    .project-item-jda {
+        width: auto; /* Lebar otomatis untuk menyesuaikan dengan kolom */
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .project-box-jda {
+        grid-template-columns: 1fr; /* 1 kolom di layar sangat kecil */
+    }
+
+    .project-item-jda {
+        padding: 15px; /* Mengurangi padding untuk ruang lebih efisien */
+    }
+
+    .project-item-jda h3 {
+        height: auto; /* Biarkan tinggi otomatis untuk judul */
+    }
+}
+/*  ------------------------------------------------------------------------------  */
 
 /*  maven market project start  */
 /* Styling untuk maven tab */
@@ -1574,6 +2286,31 @@ tbody tr:hover {
     border-radius: 10px;
 }
 
+/*  ------------------------------------------------------------------------------  */
+/* Media Queries untuk Responsif */
+@media only screen and (max-width: 768px) {
+    .maven-tabs {
+        flex-wrap: wrap; /* Membuat tab menjadi responsif dan bisa dibungkus */
+        padding: 20px; /* Mengurangi padding untuk ruang lebih efisien */
+    }
+
+    .maven-tablink {
+        width: 100%; /* Mengubah lebar tombol tab menjadi 100% pada layar kecil */
+        margin-bottom: 10px; /* Jarak antar tab */
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .maven-tabs {
+        padding: 10px; /* Mengurangi padding untuk ruang lebih efisien */
+    }
+
+    .dax-function > div {
+        flex: 1 1 100%; /* Mengatur div untuk menggunakan 100% lebar pada layar kecil */
+    }
+}
+/*  ------------------------------------------------------------------------------  */
+
 /* bike sharing dataset format */
 /* Container styles */
 .bike-tab-container {
@@ -1674,6 +2411,44 @@ tbody tr:hover {
     color: black;
     font-weight: bolder;
 }
+
+/*  ------------------------------------------------------------------------------  */
+/* Media Queries untuk Responsif */
+@media only screen and (max-width: 768px) {
+    .bike-tabs button {
+        width: 100%; /* Mengubah lebar tombol tab menjadi 100% pada layar kecil */
+        height: auto; /* Mengatur tinggi menjadi otomatis */
+        padding: 10px; /* Menyesuaikan padding untuk ruang lebih efisien */
+        margin-bottom: 5px; /* Jarak antar tombol tab */
+    }
+
+    .bike-tabcontent {
+        padding: 15px; /* Mengurangi padding pada konten untuk layar kecil */
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .bike-tabcontainer {
+        width: 100%; /* Memastikan kontainer menggunakan lebar penuh */
+    }
+
+    .bike-tabs {
+        padding: 10px; /* Mengurangi padding pada tab */
+    }
+
+    .bike-tabcontent h3 {
+        font-size: 20px; /* Mengurangi ukuran font untuk judul */
+    }
+
+    .bike-tabcontent h4 {
+        font-size: 18px; /* Mengurangi ukuran font untuk sub-judul */
+    }
+
+    .bike-tabcontent p, .bike-tabcontent ul li {
+        font-size: 16px; /* Mengurangi ukuran font untuk konten */
+    }
+}
+/*  ------------------------------------------------------------------------------  */
 
 /*  NHTSA format    */
 /* NHTSA Tab Styling */
@@ -1783,3 +2558,48 @@ tbody tr:hover {
     padding: 5px;
     border: 1px solid yellow;
 }
+
+/*  ------------------------------------------------------------------------------  */
+/* Media Queries untuk Responsif */
+@media only screen and (max-width: 768px) {
+    .nhtsa-tab-item {
+        padding: 10px; /* Menyesuaikan padding pada tab item */
+        font-size: 14px; /* Ukuran font lebih kecil untuk layar kecil */
+    }
+
+    .nhtsa-tab-item-img {
+        width: 100%; /* Memastikan gambar menyesuaikan lebar */
+        height: auto; /* Tinggi otomatis agar proporsional */
+    }
+
+    .nhtsa-tab-content {
+        padding: 15px; /* Mengurangi padding pada konten untuk layar kecil */
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .nhtsa-tab-container {
+        width: 100%; /* Memastikan kontainer menggunakan lebar penuh */
+    }
+
+    .nhtsa-tab-menu {
+        flex-direction: column; /* Mengubah arah menu menjadi kolom untuk layar kecil */
+    }
+
+    .nhtsa-tab-item {
+        width: 100%; /* Mengatur tab item menggunakan lebar penuh */
+    }
+
+    .nhtsa-tab-panel h3 {
+        font-size: 20px; /* Mengurangi ukuran font untuk judul */
+    }
+
+    .nhtsa-tab-panel h4 {
+        font-size: 18px; /* Mengurangi ukuran font untuk sub-judul */
+    }
+
+    .nhtsa-tab-panel p, .nhtsa-tab-panel ol li {
+        font-size: 16px; /* Mengurangi ukuran font untuk konten */
+    }
+}
+/*  ------------------------------------------------------------------------------  */
