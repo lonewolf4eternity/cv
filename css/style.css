@@ -2060,7 +2060,8 @@ tbody tr:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: left;
     width: 350px;
-    height: auto;
+    height: 550px;
+    overflow-y: auto;
     border: 2px solid gold;
 }
 
